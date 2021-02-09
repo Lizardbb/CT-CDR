@@ -275,7 +275,7 @@
 
           d3.queue()
               .defer(d3.json, "ct_towns_simplified.topojson")
-              .defer(d3.csv, "TotalCrashesPerTown.csv", build_crashes_map)
+              .defer(d3.csv, "CSV's/TotalCrashesPerTown.csv", build_crashes_map)
               .await(MakeMyMap);
           
           </script>
