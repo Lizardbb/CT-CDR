@@ -41,6 +41,9 @@
               + " crashes</span>"
               + "<br>"
               + "<span>"
+              + "<br>"
+              + "Click For Toxicology Data"
+              + "<br></span>"
               //Change this line to add more to the hover over tip
               //+ crashesMap[d.properties.NAME10].Crashes
               //+ " crashes</span>"
@@ -79,6 +82,10 @@
               crashesMap[row.Town].Crashes = crashes + " ";
               
           };
+
+          function toxicologyClick() {
+                window.open('Drugs & Crashes/age.html');
+          }
 
 
           const moreThan10 = {};
@@ -126,7 +133,8 @@
                         "area test-element"*/
                     )
                     .on("mouseover", tip.show)
-                    .on("mouseout", tip.hide);
+                    .on("mouseout", tip.hide)
+                    .on("click", toxicologyClick);
                 areas.merge(group).selectAll("path")
                     .attr("d", path);
             }
