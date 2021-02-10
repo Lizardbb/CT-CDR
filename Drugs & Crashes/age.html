@@ -4,15 +4,30 @@
         <meta charset="utf-8">
         <title>d3 Updating Bar Chart With Dropdown</title>
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+        <input type="button" class="return" onclick="location.href='/index.html';" value="Return to Map" />
         <style>
+
+        input {
+            position: relative;
+            font-size: large;
+            z-index: +1;
+            padding: .5em;
+            margin-bottom: 3em ;
+        }
+        
         body {
-            font: 10px sans-serif;
+            margin-top: 5%;
+            margin-left: 5%;
+            padding: 2em;
+            font: 12px sans-serif;
+            background-color: lightgray;
         }
         select {
             display: block;
         }
         .bar {
-            fill: rgba(222, 171, 244, 0.783);
+            fill: rgb(209, 20, 184);
             opacity: 0.8;
         }
 
@@ -74,7 +89,7 @@
                     .attr("x", (width / 2))             
                     .attr("y", 0 - (margin.top / 2))
                     .attr("text-anchor", "middle")  
-                    .style("font-size", "16px")  
+                    .style("font-size", "22px")  
                     .text("Drug Usage By Age Group");
                 
 
@@ -111,7 +126,7 @@
                     .attr("x",0 - (height / 2))
                     .attr("dy", "1em")
                     .style("text-anchor", "middle")
-                    .text("Cases"); 
+                    .text("Age within Range"); 
                 
                 //adding x-axis title 
                 canvas.append("text")             
@@ -119,7 +134,7 @@
                     "translate(" + (width/2) + " ," + 
                            (height + margin.top + 80) + ")")
                     .style("text-anchor", "middle")
-                    .text("Age Group");
+                    .text("Drugs");
 
 
 
