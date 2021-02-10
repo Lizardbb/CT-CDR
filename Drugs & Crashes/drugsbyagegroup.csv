@@ -1,0 +1,85 @@
+Drug,"0-18","19-25","26-34","35-54","55-64","65"
+Acetaminophen,0,0,0,2,1,0
+Acetone,0,0,1,0,1,0
+Alprazolam,0,2,6,12,1,0
+Amantadine,0,0,0,1,1,0
+Amitriptyline,0,0,0,2,0,0
+Amphetamine,0,8,21,30,2,1
+"Barbiturates - positive",0,0,0,1,0,0
+Benzodiazepines,6,25,34,37,16,3
+Benzoylecgonine,0,10,13,24,5,0
+Buprenorphine,0,1,16,24,10,1
+Bupropion,0,0,6,12,5,0
+Buproprion metabolite,0,0,0,2,0,0
+Butalbital,0,1,0,0,0,0
+Cannabinoids,12,108,94,111,24,3
+Cetirizine,0,0,1,1,0,0
+Chlordiazepoxide,0,0,0,2,0,0
+Chlorpheniramine,0,0,0,0,1,0
+Citalopram / Escitalopram,0,1,2,4,1,4
+Clonazepam,0,2,7,14,2,1
+Cocaethylene,0,1,7,9,1,0
+Cocaine,2,17,56,80,24,0
+Codeine,0,0,2,1,1,0
+Cyclobenzaprine,0,4,0,6,1,1
+Demoxepam,0,0,0,1,0,0
+"Desmethylcitalopram /Desmethylescitalopram",0,0,2,3,0,4
+"Desmethylcitalopram /Desmethylescitalopram 21ng/mL",0,1,0,0,0,0
+"Desmethylcitalopram /Desmethylescitalopram 7ng/mL",0,0,0,1,0,0
+"Desmethylmirtazepine",0,0,0,0,0,1
+"Dextromethorphan/Levomethorphan",0,1,3,1,1,3
+"Dextrorphan/Levorphanol",0,1,0,0,1,0
+Diazepam,0,0,0,9,8,1
+Diltiazem,0,0,0,0,0,1
+Diphenhydramine,0,1,2,6,6,4
+Doxepin,0,0,0,0,1,0
+Doxylamine,0,1,2,2,2,0
+"Ecgonine methyl ester",0,3,6,2,3,0
+"Ephedrine/Pseudoephedrine",0,0,2,3,1,1
+Ethanol,8,133,187,286,112,46
+Fentanyl,2,6,29,41,2,2
+Fluoxetine,0,2,2,3,0,0
+Gabapentin,0,0,2,4,1,0
+Hydrocodol,0,0,0,0,0,1
+Hydrocodone,0,0,0,0,2,1
+Hydromorphone,1,0,0,0,0,1
+Ibuprofen,0,2,2,6,1,2
+Iminostilbene,0,0,1,0,0,0
+Ketamine,0,2,2,1,0,0
+Lamotrigine,0,0,1,1,0,0
+Levetiracetam,0,0,0,2,0,0
+Lidocaine,0,5,3,1,3,3
+Lorazepam,0,1,2,1,6,4
+Methadone,0,11,41,68,14,2
+Metoprolol,0,0,0,2,1,3
+Midazolam,1,1,4,3,0,0
+Mirtazapine,0,0,0,1,0,1
+Modafinil,0,0,0,0,1,0
+Morphine,0,3,11,14,2,6
+N-Desmethyltramadol,0,0,1,3,1,1
+N-desmethylvenlafaxine,0,0,0,0,0,1
+Naproxen,0,0,0,0,1,0
+Negative,27,134,177,289,79,64
+None,21,86,75,134,62,70
+Nortriptyline,0,0,0,2,0,0
+O-Desmethyltramadol,0,0,1,2,0,1
+Opiate,0,3,42,53,14,1
+Oxazepam,0,0,0,1,3,0
+Oxcarbazepine,0,0,1,0,0,0
+"oxcarbazepine hydroxy metabolite",0,0,1,0,0,0
+Oxycodone,0,7,11,15,6,3
+Oxymorphone,0,1,2,1,0,1
+Paroxetine,0,0,0,0,1,0
+PCP,0,0,23,51,2,0
+Pheniramine,0,1,0,0,0,0
+Phenylpropanolamine,0,0,3,3,0,0
+Phenytoin,0,0,0,2,0,0
+Propranolol,0,0,0,1,0,0
+Sertraline,0,0,5,6,2,4
+Temazepam,0,0,0,1,4,0
+THC,12,65,35,54,8,2
+Topiramate,0,0,1,4,1,0
+Tramadol,0,0,1,3,1,1
+"Valproic acid",0,0,0,0,1,0
+Venlafaxine,0,0,0,5,0,1
+Zolpidem,0,0,1,4,1,1
