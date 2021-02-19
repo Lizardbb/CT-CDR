@@ -16,21 +16,21 @@
 </head>
 <body>
     <button class="tablink" onclick="openPage('Home', this, 'lightblue')">Home</button>
-    <button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+    <button class="tablink" onclick="openPage('Toxicology', this, 'green')" id="defaultOpen">Toxicology</button>
     <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
     <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
     <div id="Home" class="tabcontent">
         <div id="chart"></div>
 
-        <iframe src="ctmap.html" frameborder="0" width="60%" height="40%"></iframe>
+        <iframe src="ctmap.html" frameborder="0" width="80%" height="60%" scrolling ="no"></iframe>
 
-        <iframe src="single_page_index.html" frameborder="0"></iframe>
     </div>
 
-    <div id="News" class="tabcontent">
-        <h3>News</h3>
-        <p>Some news this fine day!</p>
+    <div id="Toxicology" class="tabcontent">
+        <h1>Toxicology Report Data</h1>
+
+        <iframe src="Drugs & Crashes/Drugs.html" frameborder="0" width="40%" height="50%" scrolling ="no"></iframe>
     </div>
 
     <div id="Contact" class="tabcontent">

@@ -3,6 +3,12 @@ body, html {
   height: 100%;
   margin: 0;
   font-family: Arial;
+  background-color: lightgrey;
+}
+
+body h1, html h1 {
+  color: black;
+  margin-left: 41%;
 }
 
 /* Style tab links */
@@ -28,6 +34,11 @@ body, html {
   display: none;
   padding: 100px 20px;
   height: 100%;
+}
+
+iframe {
+  overflow: hidden;
+  padding-top: 10em;
 }
 
 #Home {
