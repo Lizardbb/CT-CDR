@@ -5,7 +5,6 @@
         <title>d3 Updating Bar Chart With Dropdown</title>
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 
-        <input type="button" class="return" onclick="location.href='index.html';" value="Return to Map" />
         <style>
 
         input {
@@ -105,7 +104,6 @@
                     .attr("y", 0 - (margin.top / 2))
                     .attr("text-anchor", "middle")  
                     .style("font-size", "18px")  
-                    .text("Number of Crashes By Light Condition");
                 var updateBars = function(data) {   //updating for new data
                     yScale.domain( d3.extent(data) );
                     yAxisHandleForUpdate.call(yAxis);

@@ -7,7 +7,7 @@
     <title>Test</title>
 
      <!-- Load c3.css -->
-     <link href="teststyle.css" rel="stylesheet">
+     <link href="SCSS/tabstyle.css" rel="stylesheet">
 
     <!-- Load d3.js and c3.js -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
@@ -17,30 +17,41 @@
 <body>
     <button class="tablink" onclick="openPage('Home', this, 'lightblue')">Home</button>
     <button class="tablink" onclick="openPage('Toxicology', this, 'green')" id="defaultOpen">Toxicology</button>
-    <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-    <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+    <button class="tablink" onclick="openPage('Light Conditions', this, 'purple')">Light Conditions</button>
+    <button class="tablink" onclick="openPage('Weather', this, 'pink')">Weather</button>
 
     <div id="Home" class="tabcontent">
-        <div id="chart"></div>
+        <h1>Welcome to the Connecticut Crash Data Repository</h1>
 
-        <iframe src="ctmap.html" frameborder="0" width="80%" height="60%" scrolling ="no"></iframe>
+       <!--  <iframe src="ctmap.html" height = "100%" width = "100%" frameborder="0" scrolling ="no"></iframe> -->
 
     </div>
 
     <div id="Toxicology" class="tabcontent">
         <h1>Toxicology Report Data</h1>
 
-        <iframe src="Drugs & Crashes/Drugs.html" frameborder="0" width="40%" height="50%" scrolling ="no"></iframe>
+        <table>
+            <tr>
+            <td><iframe class = "CrashesbyDrugType" src="Drugs & Crashes/Drugs.html" frameborder="0px" scrolling ="no"></iframe></td>
+            <td><iframe class = "DrugsDonut" src="Drugs & Crashes/donut.html" frameborder="0px"  scrolling ="no"></iframe></td>
+            </tr>
+        </table>
+
+            <!-- <iframe class = "CrashesbyDrugType" src="Drugs & Crashes/Drugs.html" frameborder="0" scrolling ="no"></iframe>
+    
+            <iframe class = "DrugsDonut" src="Drugs & Crashes/donut.html" frameborder="0"  scrolling ="no"></iframe> -->
+
     </div>
 
-    <div id="Contact" class="tabcontent">
-        <h3>Contact</h3>
-        <p>Get in touch, or swing by for a cup of coffee.</p>
+    <div id="Light Conditions" class="tabcontent">
+        <h1>Light Conditions</h1>
+        <iframe class = "LightGraph" src="LightConditionsGraph.html" frameborder="0"></iframe>
     </div>
 
-    <div id="About" class="tabcontent">
-        <h3>About</h3>
-        <p>Who we are and what we do.</p>
+    <div id="Weather" class="tabcontent">
+        <h1>Weather Conditions</h1>
+
+        <iframe src="weather_graph.html" frameborder="0" class="Weather"></iframe>
     </div>
 
     <script>
