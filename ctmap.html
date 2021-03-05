@@ -27,11 +27,27 @@
           const tip = d3.tip()
               .attr("class", "d3-tip")
               .offset([-10,0])
-              .html(d => "<span class= 'townname'>" + d.properties.NAME10 + ":</span> <span>"
+              .html(d => "<span class= 'townname'>"
+              + d.properties.NAME10
+              + ":</span> <span>"
+              + "<br>"
+              + "Total: "
               + crashesMap[d.properties.NAME10].Crashes
               + " crashes</span>"
               + "<br>"
-              + "<span>"
+              + "<span> Fatal: "
+              + crashesMap[d.properties.NAME10].Fatals
+              + " crashes"
+              + "</span>"
+              + "<br>"
+              + "<span> Injury: "
+              + crashesMap[d.properties.NAME10].Injury
+              + "</span>"
+              + "<br>"
+              + "<span> No Injuries: "
+              + crashesMap[d.properties.NAME10].Noinjury
+              + "</span>"
+                
               //Change this line to add more to the hover over tip
               //+ crashesMap[d.properties.NAME10].Crashes
               //+ " crashes</span>"
@@ -68,6 +84,12 @@
               crashesMap[row.Town] = {};
               const crashes = row.Crashes;
               crashesMap[row.Town].Crashes = crashes + " ";
+              const Fatals = row.Fatals;
+              crashesMap[row.Town].Fatals = Fatals + " ";
+              const Injury = row.Injury;
+              crashesMap[row.Town].Injury = Injury + " ";
+              const Noinjury = row.Noinjury;
+              crashesMap[row.Town].Noinjury = Injury + " ";
               
           };
 
@@ -117,22 +139,26 @@
                         "area test-element"*/
                     )
                     .on("mouseover", tip.show)
-                    .on("mouseout", tip.hide);
+                    //.on("click", tip.show)
+                    .on("mouseout", tip.hide)
+                    crashesMap[d.properties.NAME10].addEventListener("click", location.href= "index.html");
+                    
                 areas.merge(group).selectAll("path")
                     .attr("d", path);
             }
 
 
               redraw();
-
+            
               //window.addEventListenter("resize", redraw);
 
           }
 
           d3.queue()
               .defer(d3.json, "ct_towns_simplified.topojson")
-              .defer(d3.csv, "CSV's/TotalCrashesPerTown.csv", build_crashes_map)
+              .defer(d3.csv, "CSV's/TownTotalcrashesFatalsInjuryNoinjury.csv", build_crashes_map)
               .await(MakeMyMap);
+            
           
           </script>
       </div>
