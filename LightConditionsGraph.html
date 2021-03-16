@@ -17,8 +17,7 @@
         body {
             font: 14px sans-serif;
             background-color: lightgray;
-            margin-top: 5%;
-            margin-left: 20%;
+        
         }
         select {
             display: block;
@@ -60,8 +59,8 @@
             });
             var makeVis = function(townMap) {
                 var margin = { top: 30, right: 50, bottom: 30, left: 50 },  //Dimensions of the Visual
-                    width  = 1700 - margin.left - margin.right,
-                    height = 800 - margin.top  - margin.bottom;
+                    width  = 800 - margin.left - margin.right,
+                    height = 400 - margin.top  - margin.bottom;
                 var xScale = d3.scale.ordinal()     //Getting Scale for Axis
                     .domain(conditionFields)
                     .rangeRoundBands([0, width], 0.1);

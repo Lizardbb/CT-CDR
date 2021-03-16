@@ -15,8 +15,6 @@
         body {
             font: 14px sans-serif;
             background-color: lightgray;
-            margin-top: 5%;
-            margin-left: 20%;
         }
         select {
             display: block;
@@ -65,8 +63,8 @@
             var makeVis = function(townMap) {
                 // Define dimensions of vis
                 var margin = { top: 30, right: 50, bottom: 30, left: 50 },
-                    width  = 1700 - margin.left - margin.right,
-                    height = 800 - margin.top  - margin.bottom;
+                    width  = 800 - margin.left - margin.right,
+                    height = 400 - margin.top  - margin.bottom;
 
                 // Make x scale
                 var xScale = d3.scale.ordinal()

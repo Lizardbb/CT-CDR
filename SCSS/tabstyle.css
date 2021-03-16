@@ -66,31 +66,31 @@ iframe.DrugsDonut, iframe.CrashesbyDrugType {
 
 iframe.LightGraph {
   overflow: hidden;
-  float: left;
-  width: 80%;
-  height: 100vh;
+  float: right;
+  width: 50em;
+  height: 60em;
 }
 
 iframe.Weather {
   overflow: hidden;
   float: left;
-  width: 80%;
-  height: 100vh;
+  width: 40em;
+  height: 60em;
+}
+
+iframe.MotorMap {
+  overflow: hidden;
+  width: 40em;
+  height: 40em;
+}
+
+iframe.InjuryGraph {
+  overflow: hidden;
+  width: 60%;
+  height: 60%;
 }
 
 #Home {
   background-color: lightblue;
-}
-
-#News {
-  background-color: green;
-}
-
-#Contact {
-  background-color: blue;
-}
-
-#About {
-  background-color: orange;
 }
 /*# sourceMappingURL=tabstyle.css.map */
