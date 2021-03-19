@@ -22,6 +22,11 @@ body h1, html h1 {
   margin-left: 24%;
 }
 
+#Home table {
+  width: 100%;
+  height: 100%;
+}
+
 /* Style tab links */
 .tablink {
   background-color: #555;
@@ -84,10 +89,15 @@ iframe.MotorMap {
   height: 40em;
 }
 
-iframe.InjuryGraph {
+embed.InjuryGraph {
   overflow: hidden;
-  width: 60%;
-  height: 60%;
+  width: 50em;
+  height: 50em;
+}
+
+embed.IFMap {
+  width: 40em;
+  height: 40em;
 }
 
 #Home {
