@@ -1,7 +1,7 @@
 import dash
 import dash_core_components as dcc 
 import dash_html_components as html 
-from dash.dependencies import Output, Input
+from dash.dependencies import Output, Inputpy
 import plotly.express as px 
 import dash_bootstrap_components as dbc 
 import pandas as pd 
@@ -155,4 +155,4 @@ def update_bar_chart(drug):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port = 5501)
