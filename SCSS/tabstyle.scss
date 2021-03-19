@@ -92,10 +92,11 @@ body, html {
     height: 40em;
   }
 
-  iframe.InjuryGraph {
+  embed.InjuryGraph {
     overflow: hidden;
-    width: 60%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
+    background-color: rgb(67, 67, 75);
   }
 
   embed.ToxPage {

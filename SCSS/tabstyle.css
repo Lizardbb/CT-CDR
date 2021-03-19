@@ -84,10 +84,11 @@ iframe.MotorMap {
   height: 40em;
 }
 
-iframe.InjuryGraph {
+embed.InjuryGraph {
   overflow: hidden;
-  width: 60%;
-  height: 60%;
+  width: 40%;
+  height: 40%;
+  background-color: #43434b;
 }
 
 embed.ToxPage {
