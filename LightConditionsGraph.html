@@ -43,13 +43,12 @@
     <body>
         <div id='vis-container'></div>
         <script type="text/javascript">
-            var fileName = "CSV's/TownsByLightTransposed.csv";    //Pulling Data
-            var conditionFields = ["Daylight", "Dawn", "Dusk", "Dusk", "Dark w/ Light",
-                                   "Dark w/o Light", "Dark w/ Unknown Lighting", "Other", "Unknown"];
+            var fileName = "CSVs/TownTotalcrashesFatalsInjuryNoinjury (2).csv";    //Pulling Data
+            var conditionFields = ["Total", "Fatal", "Injury", "No Injury" ];
             d3.csv(fileName, function(error, data) {    //Error CheckingS
                 var townMap = {};
                 data.forEach(function(d) {
-                    var town = d.town;
+                    var town = d.CrashTownName;
                     townMap[town] = [];
                     conditionFields.forEach(function(field) {
                         townMap[town].push( +d[field] );

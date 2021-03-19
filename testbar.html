@@ -42,13 +42,12 @@
     <div id="chart"></div>
 
     <script type="text/javascript">
+
       var chart = c3.generate({
         data: {
-          columns: [
-            ['Injury', 300, 350, 300, 0, 0, 0],
-            ['Fatality', 130, 100, 140, 200, 150, 50]
-          ],
-          type: 'bar'
+          url: 'CSVs/TownTotalcrashesFatalsInjuryNoinjury (2).csv',
+          type: 'line'
+
         },
         axis: {
           y: {
