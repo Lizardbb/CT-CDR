@@ -97,6 +97,11 @@
           const moreThan10 = {};
           moreThan10
 
+
+          function LinkClick(url){
+              window.addEventListener("click", window.location.href=url);
+          }
+
           svg.call(tip);
 
           function MakeMyMap(error, mapData) {
@@ -139,20 +144,19 @@
                         "area test-element"*/
                     )
                     .on("mouseover", tip.show)
-                    //.on("click", tip.show)
-                    .on("mouseout", tip.hide)
-                    crashesMap[d.properties.NAME10].addEventListener("click", location.href= "index.html");
+                    //.on("click", LinkClick("index.html"))
+                    .on("mouseout", tip.hide);
+                    
                     
                 areas.merge(group).selectAll("path")
                     .attr("d", path);
             }
-
-
               redraw();
             
-              //window.addEventListenter("resize", redraw);
-
+              
           }
+
+
 
           d3.queue()
               .defer(d3.json, "ct_towns_simplified.topojson")
