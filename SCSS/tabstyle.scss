@@ -4,10 +4,10 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial;
-    background-color: lightgrey;
+    background-color: black;
 
     h1 {
-      color: black;
+      color: white;
       margin-left: 41%;
     }
   }
@@ -40,9 +40,9 @@ body, html {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 1em 1.5em;
     font-size: 17px;
-    width: 25%;
+    width: 20%;
   }
   
   .tablink:hover {
@@ -99,6 +99,7 @@ body, html {
 
   embed.InjuryGraph {
     overflow: hidden;
+
     width: 50em;
     height: 50em;
   }
@@ -106,6 +107,7 @@ body, html {
   embed.IFMap {
     width: 40em;
     height: 40em;
+
   }
 
 
