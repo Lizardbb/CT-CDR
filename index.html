@@ -25,6 +25,7 @@
     <button class="tablink" onclick="openPage('Demographics', this, 'yellow')">Demographics</button>
     <button class="tablink" onclick="openPage('Road Cond', this, 'blue')">Road Condition at Time of Crash</button>
     <button class="tablink" onclick="openPage('Statistics', this, 'pink')">Vehicle Statistics</button>
+    <button class="tablink" onclick="openPage('Covid', this, 'pink')">Covid-19 Statistics</button>
 
     <div id="Home" class="tabcontent">
         <h1>Welcome to the Connecticut Crash Data Repository</h1>
@@ -38,14 +39,8 @@
     <div id="Toxicology" class="tabcontent">
         <h1>Toxicology Report Data</h1>
 
-        <table>
-            <tr>
-            <td><iframe class = "CrashesbyDrugType" src="Drugs & Crashes/Drugs.html" frameborder="0px" scrolling ="no"></iframe></td>
-            <td><iframe class = "DrugsDonut" src="Drugs & Crashes/donut.html" frameborder="0px"  scrolling ="no"></iframe></td>
-            </tr>
-        </table>
+        <embed src="http://127.0.0.1:8050/" class="ToxPage" type="">
 
-            <!-- <iframe class = "CrashesbyDrugType" src="Drugs & Crashes/Drugs.html" frameborder="0" scrolling ="no"></iframe>
     
             <iframe class = "DrugsDonut" src="Drugs & Crashes/donut.html" frameborder="0"  scrolling ="no"></iframe> -->
 
@@ -54,7 +49,13 @@
     <div id="Injury" class="tabcontent">
         <h1>Injury/Fatality</h1>
 
-        <iframe class="InjuryGraph" src="testbar.html"  scrolling ="no"></iframe>
+        <table>
+            <tr>
+            <td> <embed src="testbar.html" frameborder="0" class="InjuryGraph"></embed></td>
+            <td> <embed src="Maps/injury_fatality_map.html" class="IFMap" frameborder="0"></embed> </td>
+            </tr>
+        </table>
+
         
         
     </div>

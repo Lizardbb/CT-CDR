@@ -155,5 +155,4 @@ def update_bar_chart(drug):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port = 8050)
-
+    app.run_server(debug=True, port = 5500)
