@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>d3 Updating Bar Chart With Dropdown</title>
         <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
         <style>
 
         input {
@@ -20,12 +21,16 @@
             display: block;
         }
         .bar {
-            fill: rgb(209, 20, 184);
+            fill: rgb(114, 165, 241);
             opacity: 0.8;
             stroke:rgb(0, 0, 0);
             stroke-width:2.5;   /* this changes the stroke width*/
             stroke-linecap:butt; 
             stroke-opacity: 1.0;
+        }
+
+        .bar:hover {
+            fill: aquamarine;
         }
 
         .axis path,
@@ -34,6 +39,37 @@
             stroke: #000;
             shape-rendering: crispEdges;
         }
+
+
+        .d3-tip {
+            line-height: 1;
+            font-weight: bold;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            border-radius: 2px;
+        }
+
+        /* Creates a small triangle extender for the tooltip */
+        .d3-tip:after {
+            box-sizing: border-box;
+            display: inline;
+            font-size: 10px;
+            width: 100%;
+            line-height: 1;
+            color: rgba(0, 0, 0, 0.8);
+            content: "\25BC";
+            position: absolute;
+            text-align: center;
+        }
+
+        /* Style northward tooltips differently */
+            .d3-tip.n:after {
+            margin: -1px 0 0 0;
+            top: 100%;
+            left: 0;
+        }
+
         </style>
 
     <h1>Bar Graph of Crashes by Weather Condition</h1>
@@ -41,15 +77,21 @@
     <body>
         <div id='vis-container'></div>
         <script type="text/javascript">
+
+                var tip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function(d) {
+                        return "<strong>Value:</strong> <span style='color:red'>" + "hello" + "</span>";
+                })
             // Load and munge data, then make the visualization.
-            var fileName = "CSV's/TownsByWeatherTransposed.csv";
-            var conditionFields = ["Clear", "Blowing Sand,Soil,Dirt", "Cloudy", "Fog,Smog,Smoke", "Rain",
-                                   "Sleet/Hail", "Frz-Rain/Frz-Drizzle", "Snow","Blowing_Snow", "N/A", "Severe_Crosswinds", "Other", "Unknown"];
+            var fileName = "Injury/Fatality/TownTotalcrashesFatalsInjuryNoinjury.csv";
+            var conditionFields = ["Total", "Fatal", "Injury", "No_Injury"];
 
             d3.csv(fileName, function(error, data) {
                 var townMap = {};
                 data.forEach(function(d) {
-                    var town = d.town;
+                    var town = d.Town;
                     townMap[town] = [];
 
                     // { cerealName: [ bar1Val, bar2Val, ... ] }
@@ -60,6 +102,7 @@
                 makeVis(townMap);
             });
 
+
             var makeVis = function(townMap) {
                 // Define dimensions of vis
                 var margin = { top: 30, right: 50, bottom: 30, left: 50 },
@@ -69,7 +112,7 @@
                 // Make x scale
                 var xScale = d3.scale.ordinal()
                     .domain(conditionFields)
-                    .rangeRoundBands([0, width], 0.1);
+                    .rangeRoundBands([0, width], .1);
 
                 // Make y scale, the domain will be defined on bar update
                 var yScale = d3.scale.linear()
@@ -83,6 +126,7 @@
                   .append("g")
                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+                canvas.call(tip)
 
                 //adding legend
                 
@@ -121,6 +165,8 @@
 
                     var bars = canvas.selectAll(".bar").data(data);
 
+            
+
                     // Add bars for new data
                     bars.enter()
                       .append("rect")
@@ -128,7 +174,9 @@
                         .attr("x", function(d,i) { return xScale( conditionFields[i] ); })
                         .attr("width", xScale.rangeBand())
                         .attr("y", function(d,i) { return yScale(d); })
-                        .attr("height", function(d,i) { return height - yScale(d); });
+                        .attr("height", function(d,i) { return height - yScale(d); })
+                        .on('mouseover', tip.show)
+                        .on('mouseout', tip.hide)
 
                     // Update old ones, already have x / width from before
                     bars
@@ -138,7 +186,7 @@
 
                     // Remove old ones
                     bars.exit().remove();
-                };
+                    };
 
                 // Handler for dropdown value change
                 var dropdownChange = function() {
@@ -165,6 +213,8 @@
 
                 var initialData = townMap[ towns[0] ];
                 updateBars(initialData);
+
+
             };
         </script>
     </body>
