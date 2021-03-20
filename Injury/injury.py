@@ -4,13 +4,21 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
+import dash_bootstrap_components as dbc 
 import plotly.express as px
 
-df = pd.read_csv("Injury\injuryByAgeGroup.csv")
+df = pd.read_csv("injuryByAgeGroup.csv")
+
+colors = {
+    'background': '#111111',
+    'text': '#FFFFFF'
+}
+
+###STYLESHEET
 
 # you need to include __name__ in your Dash constructor if
 # you plan to use a custom CSS or JavaScript in your Dash apps
-app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 
 #---------------------------------------------------------------
 app.layout = html.Div([
@@ -29,7 +37,7 @@ app.layout = html.Div([
             value='0-18',
             multi=False,
             clearable=False,
-            style={"width": "50%"}
+            style={"width": "40%"}
         ),
     ]),
 
@@ -38,6 +46,7 @@ app.layout = html.Div([
     ]),
 
 ])
+
 
 #---------------------------------------------------------------
 @app.callback(
@@ -50,7 +59,8 @@ def update_graph(my_dropdown):
 
     piechart=px.pie(
             data_frame=dff,
-            names=my_dropdown,
+            values= my_dropdown,
+            names='Injury',
             hole=.3,
             )
 
