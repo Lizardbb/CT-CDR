@@ -55,6 +55,7 @@ body, html {
     display: none;
     padding: 100px 20px;
     height: 100%;
+
   }
 
   iframe.CrashesbyDrugType {
@@ -103,13 +104,28 @@ body, html {
     width: 50em;
     height: 50em;
   }
-
+  #injury {
+    embed {
+      padding-left: 5em;
+    }
+  }
   embed.IFMap {
     width: 40em;
     height: 40em;
 
   }
 
+  embed.WorkZone {
+    overflow: hidden;
+    width: 45em;
+    height: 40em
+  }
+
+  embed.BusCrash {
+    overflow: hidden;
+    width: 45em;
+    height: 40em
+  }
 
 
   

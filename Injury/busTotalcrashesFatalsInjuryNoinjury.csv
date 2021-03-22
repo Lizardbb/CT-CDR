@@ -1,4 +1,4 @@
 ﻿School_Bus_Relation,Total,Fatals,Injury,No_Injury
-No,196341,661,47844,147096
+"No, School Bus not Involved",196341,661,47844,147096
 "Yes, School Bus Directly Involved",1597,2,193,1398
 "Yes, School Bus Indirectly Involved",202,0,57,145
