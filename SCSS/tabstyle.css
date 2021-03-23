@@ -95,25 +95,27 @@ embed.InjuryGraph {
   height: 50em;
 }
 
-#injury embed {
-  padding-left: 5em;
-}
-
 embed.IFMap {
-  width: 40em;
-  height: 40em;
+  width: 60em;
+  height: 50em;
+  padding-left: 1em;
 }
 
 embed.WorkZone {
   overflow: hidden;
-  width: 45em;
-  height: 40em;
+  width: 60em;
+  height: 50em;
+  padding-left: 1em;
 }
 
 embed.BusCrash {
   overflow: hidden;
-  width: 45em;
-  height: 40em;
+  width: 60em;
+  height: 50em;
+}
+
+#injury h4 {
+  margin-left: 3em;
 }
 
 #Home {

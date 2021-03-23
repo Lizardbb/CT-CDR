@@ -20,6 +20,8 @@ colors = {
 # you plan to use a custom CSS or JavaScript in your Dash apps
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 
+server = app.server
+
 #---------------------------------------------------------------
 app.layout = html.Div([
     html.Div([
@@ -68,4 +70,4 @@ def update_graph(my_dropdown):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port = 5501)
+    app.run_server(debug=True)
