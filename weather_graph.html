@@ -82,10 +82,10 @@
                     .attr('class', 'd3-tip')
                     .offset([-10, 0])
                     .html(function(d) {
-                        return "<strong>Value:</strong> <span style='color:red'>" + "hello" + "</span>";
+                        return "<strong>Value:</strong> <span style='color:red'>" + d.field + "</span>";
                 })
             // Load and munge data, then make the visualization.
-            var fileName = "Injury/Fatality/TownTotalcrashesFatalsInjuryNoinjury.csv";
+            var fileName = "Injury/TownTotalcrashesFatalsInjuryNoinjury.csv";
             var conditionFields = ["Total", "Fatal", "Injury", "No_Injury"];
 
             d3.csv(fileName, function(error, data) {
