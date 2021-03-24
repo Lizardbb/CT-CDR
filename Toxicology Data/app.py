@@ -30,6 +30,7 @@ colors = {
 ###STYLESHEET
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 
+server = app.server
 
 # the style arguments for the sidebar. We use position:fixed and a fixed width
 SIDEBAR_STYLE = {
