@@ -132,6 +132,11 @@ embed.ToxDash {
   height: 110%;
 }
 
+embed.DemoDash {
+  width: 100%;
+  height: 110%;
+}
+
 #Home {
   background-color: lightblue;
 }

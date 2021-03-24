@@ -79,6 +79,9 @@ colors = {
 ###STYLESHEET
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 
+server = app.server
+
+
 ### Hollistic Data Card 
 card_graph = dbc.Card(
         dcc.Graph(id='my_bar', figure={
