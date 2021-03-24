@@ -101,14 +101,25 @@ body, html {
   embed.InjuryGraph {
     overflow: hidden;
 
-    width: 50em;
+    width: 40em;
     height: 50em;
+    margin: 0;
+    padding: 0;
+  }
+
+  embed.TownInjuryGraph {
+    overflow: hidden;
+
+    width: 40em;
+    height: 50em;
+    margin-left: -15em;
   }
 
   embed.IFMap {
     width: 60em;
     height: 50em;
     padding-left: 1em;
+
 
   }
 
@@ -134,4 +145,6 @@ body, html {
 
   
   #Home {background-color: lightblue;}
+
+  /* Media Queries */
  

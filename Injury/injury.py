@@ -10,7 +10,7 @@ import plotly.express as px
 df = pd.read_csv("injuryByAgeGroup.csv")
 
 colors = {
-    'background': '#111111',
+   'background': '#000000',
     'text': '#FFFFFF'
 }
 
