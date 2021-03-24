@@ -177,7 +177,7 @@ app.layout = dbc.Container([
         dbc.Col(bottom_table),
     ]),
     
-    html.Iframe(src="google.com",
+    html.Iframe(src=app.get_asset_url('ctmap.html'),
                 style={"height": "1067px", "width": "100%"})
 ])
 
