@@ -55,6 +55,7 @@ body, html {
     display: none;
     padding: 100px 20px;
     height: 100%;
+
   }
 
   iframe.CrashesbyDrugType {
@@ -100,18 +101,50 @@ body, html {
   embed.InjuryGraph {
     overflow: hidden;
 
-    width: 50em;
+    width: 40em;
     height: 50em;
+    margin: 0;
+    padding: 0;
+  }
+
+  embed.TownInjuryGraph {
+    overflow: hidden;
+
+    width: 40em;
+    height: 50em;
+    margin-left: -15em;
   }
 
   embed.IFMap {
-    width: 40em;
-    height: 40em;
+    width: 60em;
+    height: 50em;
+    padding-left: 1em;
+
 
   }
 
+  embed.WorkZone {
+    overflow: hidden;
+    width: 60em;
+    height: 50em;
+    padding-left: 1em;
+  }
+
+  embed.BusCrash {
+    overflow: hidden;
+    width: 60em;
+    height: 50em
+  }
+
+  #injury {
+     h4{
+      margin-left: 3em;
+    }
+  }
 
 
   
   #Home {background-color: lightblue;}
+
+  /* Media Queries */
  

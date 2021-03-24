@@ -26,38 +26,36 @@ colors = {
     'text': '#FFFFFF'
 }
 ###STYLESHEET
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
 
 ### Hollistic Data Card 
 card_graph = dbc.Card(
-        dcc.Graph(id='my_bar', figure={
-            'data': [
-                    {
-                        "x": hollistic_df["Drug"],
-                        "y": hollistic_df["Count"],
-                        "type": "bar",
-                        "height":00,
-                        #'color': colors['text'],
-                        #'fontColor': ["#FFFFFF"],
-                    },
-                ],
-                "layout": {
-                    "title":{
-                        "text": "Cases Per Drug",
-                        "x": 0.05,
-                        "xanchor": "left",
-                    },
-                    'paper_bgcolor':'rgba(0,0,0,0)',
-                    'plot_bgcolor':'rgba(0,0,0,0)',
-                    "colorway": ["#00e3ff"],
-                    'font': {
-                    'color': colors['text'],
-                    'size': 11
-                }
-                },
-            }),
-            body=True, className= 'card border-primary mb-3',
-            )
+         dcc.Graph(id='my_bar', figure={
+             'data': [
+                     {
+                         "x": hollistic_df["Drug"],
+                         "y": hollistic_df["Count"],
+                         "type": "bar",
+                         "height":00,
+                     },
+                 ],
+                 "layout": {
+                     "title":{
+                         "text": "Cases Per Drug",
+                         "x": 0.05,
+                         "xanchor": "left",
+                     },
+                     'paper_bgcolor':'rgba(0,0,0,0)',
+                     'plot_bgcolor':'rgba(0,0,0,0)',
+                     "colorway": 'Count',
+                     'font': {
+                     'color': colors['text'],
+                     'size': 12
+                 }
+                 },
+             }),
+             body=True, className= 'card border-primary mb-3', 
+)
 #Table
 table = dbc.Table.from_dataframe(table_df, striped=True, bordered=True, hover=True, className = 'table-primary thread-dark')
 
@@ -77,7 +75,6 @@ navbar = dbc.Navbar(
             href="https://plot.ly",
         ),
         dbc.NavbarToggler(id="navbar-toggler"),
-        #dbc.Collapse(dbc.Nav, id="navbar-collapse", navbar=True),
     ],
     color="darkblue",
     dark=True,
@@ -98,13 +95,13 @@ app.layout = dbc.Container([
     #title 
     dbc.Row([
         dbc.Col(html.H2("Toxicology Dashboard",
-                        className='text-center text-primary mb-4'),
+                        className='text-center text-info mb-4'),
                         width = 12)
     ]),
     ###hollistic bar graph and table 
     dbc.Row([
-        dbc.Col(card_graph, width=11),
-        dbc.Col(table, width= 1),
+        dbc.Col(card_graph, width=12),
+        #dbc.Col(table, width= 1),
     ]),
 
     #fatal vs severe dropdown and graph
@@ -155,4 +152,4 @@ def update_bar_chart(drug):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port = 5500)
+    app.run_server(debug=True)

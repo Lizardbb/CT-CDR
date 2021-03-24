@@ -1,0 +1,83 @@
+﻿Drug,0-18,19-25,26-34,35-54,55-64,65+,Total
+"Ethanol                                 ",8,133,187,286,112,46,774
+"Cannabinoids                            ",12,108,94,111,24,3,354
+"Cocaine                                 ",2,17,56,80,24,0,179
+"THC                                     ",12,65,35,54,8,2,176
+"Methadone                               ",0,11,41,68,14,2,137
+"Benzodiazepines                         ",6,25,34,37,16,3,124
+"Opiate                                  ",0,3,42,53,14,1,114
+"Fentanyl                                ",2,6,29,41,2,2,82
+"PCP                                     ",0,0,23,51,2,0,76
+"Amphetamine                             ",0,8,21,30,2,1,62
+"Benzoylecgonine                         ",0,10,13,24,5,0,52
+"Buprenorphine                           ",0,1,16,24,10,1,52
+"Oxycodone                               ",0,7,11,15,6,3,42
+"Morphine                                ",0,3,11,14,2,6,36
+"Clonazepam                              ",0,2,7,14,2,1,26
+"Bupropion                               ",0,0,6,12,5,0,23
+"Alprazolam                              ",0,2,6,12,1,0,21
+"Diphenhydramine                         ",0,1,2,6,6,4,19
+"Diazepam                                ",0,0,0,9,8,1,18
+"Cocaethylene                            ",0,1,7,9,1,0,18
+"Sertraline                              ",0,0,5,6,2,4,17
+"Lidocaine                               ",0,5,3,1,3,3,15
+"Lorazepam                               ",0,1,2,1,6,4,14
+"Ecgonine methyl ester                   ",0,3,6,2,3,0,14
+"Ibuprofen                               ",0,2,2,6,1,2,13
+"Citalopram / Escitalopram               ",0,1,2,4,1,4,12
+"Cyclobenzaprine                         ",0,4,0,6,1,1,12
+"Desmethylcitalopram /Desmethylescitalopram  ",0,0,2,3,0,4,9
+"Dextromethorphan/Levomethorphan         ",0,1,3,1,1,3,9
+"Midazolam                               ",1,1,4,3,0,0,9
+"Ephedrine/Pseudoephedrine               ",0,0,2,3,1,1,7
+"Fluoxetine                              ",0,2,2,3,0,0,7
+"Gabapentin  ",0,0,2,4,1,0,7
+"Doxylamine                              ",0,1,2,2,2,0,7
+"Zolpidem                                ",0,0,1,4,1,1,7
+"Venlafaxine                             ",0,0,0,5,0,1,6
+"Phenylpropanolamine                     ",0,0,3,3,0,0,6
+"Topiramate                              ",0,0,1,4,1,0,6
+"Tramadol  ",0,0,1,3,1,1,6
+"Metoprolol                              ",0,0,0,2,1,3,6
+"N-Desmethyltramadol  ",0,0,1,3,1,1,6
+"Oxymorphone                             ",0,1,2,1,0,1,5
+"Ketamine                                ",0,2,2,1,0,0,5
+"Temazepam                               ",0,0,0,1,4,0,5
+"O-Desmethyltramadol  ",0,0,1,2,0,1,4
+"Oxazepam                                ",0,0,0,1,3,0,4
+"Codeine  ",0,0,2,1,1,0,4
+"Acetaminophen  ",0,0,0,2,1,0,3
+"Hydrocodone                             ",0,0,0,0,2,1,3
+"Hydromorphone                           ",1,0,0,0,0,1,2
+"Lamotrigine  ",0,0,1,1,0,0,2
+"Levetiracetam  ",0,0,0,2,0,0,2
+"Mirtazapine  ",0,0,0,1,0,1,2
+"Nortriptyline                           ",0,0,0,2,0,0,2
+"Acetone                                 ",0,0,1,0,1,0,2
+"Amantadine  ",0,0,0,1,1,0,2
+"Amitriptyline                           ",0,0,0,2,0,0,2
+"Buproprion metabolite  ",0,0,0,2,0,0,2
+"Cetirizine  ",0,0,1,1,0,0,2
+"Chlordiazepoxide                        ",0,0,0,2,0,0,2
+"Dextrorphan/Levorphanol  ",0,1,0,0,1,0,2
+"Phenytoin  ",0,0,0,2,0,0,2
+"Propranolol  ",0,0,0,1,0,0,1
+"Valproic acid  ",0,0,0,0,1,0,1
+"Diltiazem  ",0,0,0,0,0,1,1
+"Doxepin                                 ",0,0,0,0,1,0,1
+"Demoxepam  ",0,0,0,1,0,0,1
+Desmethylcitalopram /Desmethylescitalopram 21ng/mL,0,1,0,0,0,0,1
+"Desmethylcitalopram /Desmethylescitalopram 7ng/mL ",0,0,0,1,0,0,1
+"Desmethylmirtazepine  ",0,0,0,0,0,1,1
+"Chlorpheniramine  ",0,0,0,0,1,0,1
+"Barbiturates - positive  ",0,0,0,1,0,0,1
+"Butalbital                              ",0,1,0,0,0,0,1
+"Modafinil  ",0,0,0,0,1,0,1
+"N-desmethylvenlafaxine                  ",0,0,0,0,0,1,1
+"Naproxen  ",0,0,0,0,1,0,1
+"Oxcarbazepine  ",0,0,1,0,0,0,1
+"oxcarbazepine hydroxy metabolite  ",0,0,1,0,0,0,1
+"Paroxetine  ",0,0,0,0,1,0,1
+"Pheniramine  ",0,1,0,0,0,0,1
+"Iminostilbene  ",0,0,1,0,0,0,1
+"Hydrocodol                              ",0,0,0,0,0,1,1
