@@ -1,0 +1,133 @@
+﻿Drug,Sex,DrugByGender
+"Acetaminophen  ",F,1
+"Acetaminophen  ",M,2
+"Acetone                                 ",M,2
+"Alprazolam                              ",F,6
+"Alprazolam                              ",M,15
+"Amantadine  ",F,1
+"Amantadine  ",M,1
+"Amitriptyline                           ",F,2
+"Amphetamine                             ",F,19
+"Amphetamine                             ",M,42
+"Barbiturates - positive  ",F,1
+"Benzodiazepines                         ",F,33
+"Benzodiazepines                         ",M,89
+"Benzoylecgonine                         ",F,15
+"Benzoylecgonine                         ",M,36
+"Buprenorphine                           ",F,11
+"Buprenorphine                           ",M,40
+"Bupropion                               ",F,10
+"Bupropion                               ",M,13
+"Buproprion metabolite  ",M,2
+"Butalbital                              ",M,1
+"Cannabinoids                            ",F,64
+"Cannabinoids                            ",M,288
+"Cetirizine  ",F,1
+"Cetirizine  ",M,1
+"Chlordiazepoxide                        ",M,2
+"Chlorpheniramine  ",M,1
+"Citalopram / Escitalopram               ",F,5
+"Citalopram / Escitalopram               ",M,7
+"Clonazepam                              ",F,7
+"Clonazepam                              ",M,19
+"Cocaethylene                            ",F,2
+"Cocaethylene                            ",M,16
+"Cocaine                                 ",F,40
+"Cocaine                                 ",M,139
+"Codeine  ",F,2
+"Codeine  ",M,2
+"Cyclobenzaprine                         ",F,3
+"Cyclobenzaprine                         ",M,9
+"Demoxepam  ",M,1
+Desmethylcitalopram /Desmethylescitalopram,F,4
+Desmethylcitalopram /Desmethylescitalopram,M,7
+"Desmethylmirtazepine  ",M,1
+"Dextromethorphan/Levomethorphan         ",F,2
+"Dextromethorphan/Levomethorphan         ",M,7
+"Dextrorphan/Levorphanol  ",M,2
+"Diazepam                                ",F,8
+"Diazepam                                ",M,10
+"Diltiazem  ",M,1
+"Diphenhydramine                         ",F,7
+"Diphenhydramine                         ",M,12
+"Doxepin                                 ",M,1
+"Doxylamine                              ",F,1
+"Doxylamine                              ",M,6
+"Ecgonine methyl ester                   ",F,4
+"Ecgonine methyl ester                   ",M,10
+"Ephedrine/Pseudoephedrine               ",F,2
+"Ephedrine/Pseudoephedrine               ",M,5
+"Ethanol                                 ",F,177
+"Ethanol                                 ",M,498
+"Fentanyl                                ",F,17
+"Fentanyl                                ",M,63
+"Fluoxetine                              ",F,5
+"Fluoxetine                              ",M,2
+"Gabapentin  ",F,2
+"Gabapentin  ",M,5
+"Hydrocodol                              ",M,1
+"Hydrocodone                             ",M,3
+"Hydromorphone                           ",F,1
+"Hydromorphone                           ",M,1
+"Ibuprofen                               ",F,4
+"Ibuprofen                               ",M,9
+"Iminostilbene  ",F,1
+"Ketamine                                ",F,2
+"Ketamine                                ",M,3
+"Lamotrigine  ",F,2
+"Levetiracetam  ",M,2
+"Lidocaine                               ",F,4
+"Lidocaine                               ",M,11
+"Lorazepam                               ",F,8
+"Lorazepam                               ",M,6
+"Methadone                               ",F,35
+"Methadone                               ",M,102
+"Metoprolol                              ",M,6
+"Midazolam                               ",F,5
+"Midazolam                               ",M,4
+"Mirtazapine  ",F,1
+"Mirtazapine  ",M,1
+"Modafinil  ",M,1
+"Morphine                                ",F,7
+"Morphine                                ",M,29
+"N-Desmethyltramadol  ",F,3
+"N-Desmethyltramadol  ",M,3
+"N-desmethylvenlafaxine                  ",F,1
+"Naproxen  ",M,1
+Negative,F,341
+Negative,M,976
+Negative,U,3
+"Nortriptyline                           ",F,2
+"O-Desmethyltramadol  ",F,2
+"O-Desmethyltramadol  ",M,2
+"Opiate                                  ",F,28
+"Opiate                                  ",M,86
+"Oxazepam                                ",F,1
+"Oxazepam                                ",M,3
+"Oxcarbazepine  ",F,1
+"oxcarbazepine hydroxy metabolite  ",F,1
+"Oxycodone                               ",F,15
+"Oxycodone                               ",M,27
+"Oxymorphone                             ",M,5
+"Paroxetine  ",M,1
+"PCP                                     ",F,21
+"PCP                                     ",M,55
+"Pheniramine  ",M,1
+"Phenylpropanolamine                     ",F,1
+"Phenylpropanolamine                     ",M,5
+"Phenytoin  ",M,2
+"Propranolol  ",F,1
+"Sertraline                              ",F,3
+"Sertraline                              ",M,14
+"Temazepam                               ",F,2
+"Temazepam                               ",M,3
+"THC                                     ",F,43
+"THC                                     ",M,130
+"Topiramate                              ",F,3
+"Topiramate                              ",M,3
+"Tramadol  ",F,3
+"Tramadol  ",M,3
+"Valproic acid  ",M,1
+"Venlafaxine                             ",F,6
+"Zolpidem                                ",F,4
+"Zolpidem                                ",M,3
