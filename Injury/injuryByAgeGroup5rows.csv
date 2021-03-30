@@ -1,0 +1,6 @@
+﻿Injury,0-18,19-25,26-34,35-54,55-64,65+
+Fatal Injury (K),45,99,134,204,88,118
+No Apparent Injury (O),52884,52078,76162,109375,44870,38023
+Possible Injury (C),4512,5104,8010,11358,4729,3643
+Suspected Minor Injury (B),2823,3991,5665,7154,2944,2610
+Suspected Serious Injury (A),241,397,631,755,306,317
