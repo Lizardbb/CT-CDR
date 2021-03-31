@@ -138,7 +138,7 @@ body, html {
 
   #injury {
      h4{
-      margin-left: 3em;
+      margin-right: 3em;
     }
   }
 
@@ -165,16 +165,7 @@ body, html {
 
 
   #Pedestrian {
-      #Legend {
-        padding-top: 1em;
-        padding-left: 4em;
-        padding-bottom: -2em;
-      }
 
-      #Block {
-        padding: 0 .5em 0 .5em;
-        background-color: blue;
-      }
       h3 {
         margin-top: -1em;
         margin-left: 2em;
@@ -185,4 +176,63 @@ body, html {
   #Home {background-color: lightblue;}
 
   /* Media Queries */
- 
+ @media (min-width: 1700px) {
+   
+  embed.NMMap {
+    margin-top: -7em;
+    width: 40em;
+    height: 45em;
+  }
+
+  embed.NMDash {
+    width: 100vh;
+    height: 100vh;
+  }
+
+  #Pedestrian {
+
+    h3 {
+      margin-top: 4em;
+      margin-left: 3em;
+      padding: 0;
+    }
+  }
+
+
+  /*Injury Fatality*/
+  embed.InjuryGraph {
+    overflow: hidden;
+
+    width: 25em;
+    height: 35em;
+    margin-left: -7em;
+  }
+
+  embed.TownInjuryGraph {
+    overflow: hidden;
+
+    width: 25em;
+    height: 35em;
+    margin-left: -25em;
+  }
+
+  embed.IFMap {
+    width: 40em;
+    height: 45em;
+    padding-left: 1em;
+
+  }
+
+  embed.WorkZone {
+    overflow: hidden;
+    width: 50em;
+    height: 40em;
+    padding-left: 1em;
+  }
+
+  embed.BusCrash {
+    overflow: hidden;
+    width: 50em;
+    height: 40em
+  }
+ }
