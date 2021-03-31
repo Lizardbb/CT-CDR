@@ -19,18 +19,15 @@
     <button class="tablink" onclick="openPage('Home', this, 'lightblue')">Home</button>
     <button class="tablink" onclick="openPage('Toxicology', this, 'green')" id="defaultOpen">Toxicology</button>
     <button class="tablink" onclick="openPage('Injury', this, 'purple')">Injury and Fatality</button>
-    <button class="tablink" onclick="openPage('Pedestrian', this, 'pink')">Pedestrian</button>
+    <button class="tablink" onclick="openPage('Pedestrian', this, 'pink')">Non-Motorist</button>
     <button class="tablink" onclick="openPage('Motorcycle', this, 'red')">Motorcycle</button>
     <button class="tablink" onclick="openPage('Impaired Driver', this, 'pink')">Impaired Driver</button>
     <button class="tablink" onclick="openPage('Demographics', this, 'yellow')">Demographics</button>
     <button class="tablink" onclick="openPage('Road Cond', this, 'blue')">Road Condition at Time of Crash</button>
     <button class="tablink" onclick="openPage('Statistics', this, 'pink')">Vehicle Statistics</button>
-    <button class="tablink" onclick="openPage('Covid', this, 'pink')">Covid-19 Statistics</button>
 
     <div id="Home" class="tabcontent">
         <h1>Welcome to the Connecticut Crash Data Repository</h1>
-
-       <!--  <iframe src="ctmap.html" height = "100%" width = "100%" frameborder="0" scrolling ="no"></iframe> -->
 
         <iframe src="roadmap.html" frameborder="0"></iframe>
 
@@ -72,7 +69,20 @@
     </div>
 
     <div id="Pedestrian" class="tabcontent">
-        <h1>Pedestrian Crashes</h1>
+        <table>
+            <tr>
+                <td id="Legend"><span id="Block"></span> <h3>Blue = Non-Motorist Crashes</h3> </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <embed src="Non-motorist/nm_crash_map.html" class="NMMap">
+                </td>
+                <td>
+                    <embed src="https://non-motorist-dash.herokuapp.com/" class="NMDash">
+                </td>
+            </tr>
+        </table>
 
     </div>
 
@@ -108,8 +118,8 @@
 
         <table>
             <tr>
-            <td> <iframe src="weather_graph.html" frameborder="0" class="Weather"></iframe></td>
-            <td><iframe src="LightConditionsGraph.html" class="LightGraph" frameborder="0"></iframe> </td>
+            <td> <embed src="weather_graph.html" frameborder="0" class="Weather"></embed></td>
+            <td><embed src="LightConditionsGraph.html" class="LightGraph" frameborder="0"></embed> </td>
             </tr>
         </table>
 
