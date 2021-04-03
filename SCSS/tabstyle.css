@@ -143,8 +143,9 @@ embed.NMDash {
 }
 
 embed.NMMap {
+  padding-left: 4em;
   margin-top: -10em;
-  width: 50em;
+  width: 55em;
   height: 60em;
 }
 
@@ -155,11 +156,15 @@ embed.NMMap {
 }
 
 #Home {
-  background-color: lightblue;
+  background-color: black;
+}
+
+#Home h4 {
+  margin: 20em;
 }
 
 /* Media Queries */
-@media (min-width: 1700px) {
+@media (max-width: 1700px) {
   embed.NMMap {
     margin-top: -7em;
     width: 40em;
