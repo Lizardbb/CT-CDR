@@ -1,4 +1,5 @@
 import pandas as pd
+
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -6,10 +7,10 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc 
 import plotly.express as px
 
-df = pd.read_csv("injuryByAgeGroup.csv")
+df = pd.read_csv("TransposedTownTotalcrashesFatalsInjuryNoinjury.csv")
 
 colors = {
-   'background': '#000000',
+    'background': '#000000',
     'text': '#FFFFFF'
 }
 
@@ -21,31 +22,26 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 
 server = app.server
 
+
+options = [{'label': t, 'value': t} for t in df]
 #---------------------------------------------------------------
 app.layout = html.Div([
     html.Div([
-        html.Label(['Injuries by Age Group']),
+        html.Label(['Injuries by Town']),
         dcc.Dropdown(
             id='my_dropdown',
-            options=[
-                     {'label': '0-18', 'value': '0-18'},
-                     {'label': '19-25', 'value': '19-25'},
-                     {'label': '26-34', 'value': '26-34'},
-                     {'label': '35-54', 'value': '35-54'},
-                     {'label': '55-64', 'value': '55-64'},
-                     {'label': '65+', 'value': '65+'}
-            ],
-            value='0-18',
+            options=options,
+            value='Andover',
+            searchable=False,
             multi=False,
             clearable=False,
-            style={"width": "40%"}
-        ),
-    ]),
+            style={"width": "40%", 'color': colors['background']}
+        )
+        ]),
 
     html.Div([
         dcc.Graph(id='the_graph')
-    ]),
-
+    ])
 ])
 
 
@@ -60,8 +56,9 @@ def update_graph(my_dropdown):
 
     piechart=px.pie(
             data_frame=dff,
-            values= my_dropdown,
-            names='Injury',
+            labels=['Total','Fatal','Injury', 'No_Injury'],
+            values=my_dropdown,
+            names=['Total','Fatal','Injury', 'No_Injury'],
             hole=.3,
             )
 
@@ -69,4 +66,4 @@ def update_graph(my_dropdown):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=5500)
