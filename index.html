@@ -18,13 +18,11 @@
 <body>
     <button class="tablink" onclick="openPage('Home', this, 'darkblue')" id="defaultOpen">Home</button>
     <button class="tablink" onclick="openPage('Toxicology', this, 'green')">Toxicology</button>
-    <button class="tablink" onclick="openPage('Injury', this, 'purple')">Injury and Fatality</button>
+    <button class="tablink" onclick="openPage('Injury', this, 'red')">Injury and Fatality</button>
     <button class="tablink" onclick="openPage('Pedestrian', this, 'orange')">Non-Motorist</button>
-    <button class="tablink" onclick="openPage('Motorcycle', this, 'red')">Motorcycle</button>
     <button class="tablink" onclick="openPage('Impaired Driver', this, 'coral')">Impaired Driver</button>
     <button class="tablink" onclick="openPage('Demographics', this, 'brown')">Demographics</button>
     <button class="tablink" onclick="openPage('Road Cond', this, 'aqua')">Road Condition at Time of Crash</button>
-    <button class="tablink" onclick="openPage('Statistics', this, 'gold')">Vehicle Statistics</button>
     <button class="tablink" onclick="openPage('COVID', this, 'chartreuse')">Covid-19 Statistics</button>
 
     <div id="Home" class="tabcontent">
@@ -44,14 +42,16 @@
         <img src="campus-aerial-1170x365.jpg" alt="University of Connecticut Campus" class="UConnCamp"> 
 
 
-        <h4>
-            The Connecticut Crash Data Repository (CTCDR) is a web tool designed to provide access to select crash information collected by state and local police. 
-            This data repository enables users to query, analyze and print/export the data for research and informational purposes. 
-            The CTCDR is comprised of crash data from two separate sources; The Department of Public Safety (DPS) and The Connecticut Department of Transportation (CTDOT).
-            
-            The purpose of the CTCDR is to provide members of the traffic-safety community with timely, accurate, complete and uniform crash data. The CTCDR allows for complex queries of both datasets such as, 
-            by date, route, route class, collision type, injury severity, etc. For further analysis, this data can be summarized by user-defined categories to help identify trends or patterns in the crash data.
-        </h4>
+        <div class="blurb">
+            <h3>
+                The Connecticut Crash Data Repository (CTCDR) is a web tool designed to provide access to select crash information collected by state and local police. 
+                This data repository enables users to query, analyze and print/export the data for research and informational purposes. 
+                The CTCDR is comprised of crash data from two separate sources; The Department of Public Safety (DPS) and The Connecticut Department of Transportation (CTDOT).
+                
+                The purpose of the CTCDR is to provide members of the traffic-safety community with timely, accurate, complete and uniform crash data. The CTCDR allows for complex queries of both datasets such as, 
+                by date, route, route class, collision type, injury severity, etc. For further analysis, this data can be summarized by user-defined categories to help identify trends or patterns in the crash data.
+            </h3>
+        </div>
 
     </div>
 
@@ -113,16 +113,6 @@
 
     </div>
 
-    <div id="Motorcycle" class="tabcontent">
-        <h1>Motorcycle Crashes</h1>
-
-        
-        <table>
-            <tr>
-            <td><iframe class="MotorMap" src="roadmap.html" frameborder="0"></iframe></td>
-            </tr>
-        </table>
-    </div>
 
     <div id="Impaired Driver" class="tabcontent">
         <h1>Impaired Driver</h1>
