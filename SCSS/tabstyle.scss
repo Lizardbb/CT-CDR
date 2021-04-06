@@ -137,6 +137,25 @@ body, html {
     h1 {
       margin-left: 40%;
     }
+
+    h3 {
+      margin-top: -1em;
+      margin-left: 2em;
+      padding: 0;
+    }
+  }
+
+  #COVID {
+    embed.COVID-Graph {
+      width: 45em;
+      height: 45em;
+      margin-top: 3%;
+      margin-left: 10%;
+    }
+
+    h1 {
+      margin-left: 45%;
+    }
   }
 
   embed.ToxDash {
@@ -162,14 +181,6 @@ body, html {
   }
 
 
-  #Pedestrian {
-
-      h3 {
-        margin-top: -1em;
-        margin-left: 2em;
-        padding: 0;
-      }
-  }
   
 
   /* Media Queries */
