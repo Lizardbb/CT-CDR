@@ -32,6 +32,9 @@ colors = {
 ###STYLESHEET
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 
+server = app.server
+
+
 #navbar 
 navbar = dbc.Navbar(
     [
@@ -39,17 +42,15 @@ navbar = dbc.Navbar(
             # Use row and col to control vertical alignment of logo / brand
             dbc.Row(
                 [
-                    dbc.Col(html.Img(src=UCONN_LOGO, height="30px")),
-                    dbc.Col(dbc.NavbarBrand("Connecticut Crash Data Repository ", className="ml-2")),
+    
                 ],
                 align="center",
                 no_gutters=True,
             ),
-            href="https://plot.ly",
         ),
         dbc.NavbarToggler(id="navbar-toggler"),
     ],
-    color="darkblue",
+    color="black",
     dark=True,
 )
 
@@ -326,4 +327,4 @@ def update_graph(dropdown_age):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=8800)

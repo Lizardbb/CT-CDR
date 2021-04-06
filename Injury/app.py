@@ -86,17 +86,6 @@ fig_2.update_layout({
 
 #LAYOUT
 app.layout = dbc.Container([
-    #Navbar 
-    dbc.Row([
-        dbc.Col(navbar,width = 12)
-    ]),
-
-    #title 
-    dbc.Row([
-        dbc.Col(html.H2("Injuries and Fatalities Dashboard",
-                        className='text-center text-primary mb-4'),
-                        width = 12)
-    ]),
     ###hollistic bar graph and table 
     dbc.Row([
         dbc.Col(dcc.Graph(figure = fig), width = 6
@@ -213,5 +202,5 @@ def update_graph(town_dropdown):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port=5500)
 

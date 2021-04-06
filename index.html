@@ -28,30 +28,39 @@
     <button class="tablink" onclick="openPage('COVID', this, 'chartreuse')">Covid-19 Statistics</button>
 
     <div id="Home" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+
         <h1>Welcome to the Connecticut Crash Data Repository</h1>
 
        <div class="box">
-            <h4>
+            <h3>
                 Please select a tab to learn more! 
-            </h4>
+            </h3>
        </div>
 
         <img src="campus-aerial-1170x365.jpg" alt="University of Connecticut Campus" class="UConnCamp"> 
 
 
-        <h3>
+        <h4>
             The Connecticut Crash Data Repository (CTCDR) is a web tool designed to provide access to select crash information collected by state and local police. 
             This data repository enables users to query, analyze and print/export the data for research and informational purposes. 
             The CTCDR is comprised of crash data from two separate sources; The Department of Public Safety (DPS) and The Connecticut Department of Transportation (CTDOT).
             
             The purpose of the CTCDR is to provide members of the traffic-safety community with timely, accurate, complete and uniform crash data. The CTCDR allows for complex queries of both datasets such as, 
             by date, route, route class, collision type, injury severity, etc. For further analysis, this data can be summarized by user-defined categories to help identify trends or patterns in the crash data.
-        </h3>
+        </h4>
 
     </div>
 
     <div id="Toxicology" class="tabcontent">
-        <h1>Toxicology Report Data</h1>
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+        <h1>Toxicology Dashboard</h1>
 
     
         <embed src="https://toxicology-dashboard.herokuapp.com/" class="ToxDash" style="overflow:hidden">
@@ -59,20 +68,21 @@
     </div>
 
     <div id="Injury" class="tabcontent">
-        <h1>Injury/Fatality</h1>
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+
+        <h1>Injury/Fatality Dashboard</h1>
 
         <table>
+            <th>
+                <h3 class="inj">Blue = Injury</h3>
+                <h3 class="fat">Red = Fatality</h3>
+            </th>
             <tr>
                 <td> <embed src="Maps/injury_fatality_map.html" class="IFMap" frameborder="0"></embed> </td>
                 <td> <embed src="https://injury-dashboard.herokuapp.com/" frameborder="0" class="InjuryGraph"></embed></td>
-                <td> <embed src="https://town-injury-dashboard.herokuapp.com/" class="TownInjuryGraph"></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td> <embed src="Injury/workzonecrashes.html" class="WorkZone"></td>
-                <td> <embed src="Injury/buscrashes.html" class="BusCrash"></td>
             </tr>
         </table>
 
@@ -81,8 +91,16 @@
     </div>
 
     <div id="Pedestrian" class="tabcontent">
-        <h1>Non-Motorist</h1>
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+
+        <h1>Non-Motorist Dashboard</h1>
         <table>
+            <th>
+                <h2>Blue = Non-Motorist Crash</h2>
+            </th>
             <tr>
                 <td>
                     <embed src="Non-motorist/nm_crash_map.html" class="NMMap">
@@ -96,7 +114,7 @@
     </div>
 
     <div id="Motorcycle" class="tabcontent">
-        <h1>Motorcyclen Crashes</h1>
+        <h1>Motorcycle Crashes</h1>
 
         
         <table>
@@ -114,6 +132,11 @@
 
 
     <div id="Demographics" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div> 
+
         <h1>Demographics</h1>
 
         <embed src="https://demographics-dashboard.herokuapp.com/" class="DemoDash">
@@ -140,6 +163,11 @@
     </div>
 
     <div id="COVID" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+
         <h1>Covid-19 Statistics</h1>
 
         

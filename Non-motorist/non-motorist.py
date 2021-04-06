@@ -111,12 +111,7 @@ card_graph2 = dbc.Card(
 
 ###LAYOUT 
 app.layout = dbc.Container([
-    #title 
-    dbc.Row([
-        dbc.Col(html.H2("Non-Motorist Dashboard",
-                        className='text-center text-primary mb-4'),
-                        width = 12)
-    ]),
+
 
     ###hollistic bar graph
 
@@ -176,4 +171,4 @@ def update_bar_chart(Town):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port = 8800)
+    app.run_server(debug=True, port = 5501)

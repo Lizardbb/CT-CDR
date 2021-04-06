@@ -1,1 +1,1 @@
-web: gunicorn injury:server
+web: gunicorn app:server
