@@ -22,13 +22,12 @@
     <button class="tablink" onclick="openPage('Pedestrian', this, 'orange')">Non-Motorist</button>
     <button class="tablink" onclick="openPage('Impaired Driver', this, 'coral')">Impaired Driver</button>
     <button class="tablink" onclick="openPage('Demographics', this, 'brown')">Demographics</button>
-    <button class="tablink" onclick="openPage('Road Cond', this, 'aqua')">Road Condition at Time of Crash</button>
+    <button class="tablink" onclick="openPage('Road Cond', this, 'aqua')">Road Conditions</button>
     <button class="tablink" onclick="openPage('COVID', this, 'chartreuse')">Covid-19 Statistics</button>
 
     <div id="Home" class="tabcontent">
         <div class="header">
             <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
-            <h4>Connecticut Crash Data Repository</h4>
         </div>
 
         <h1>Welcome to the Connecticut Crash Data Repository</h1>
@@ -77,8 +76,8 @@
 
         <table>
             <th>
-                <h3 class="inj">Blue = Injury</h3>
-                <h3 class="fat">Red = Fatality</h3>
+                <h4 class="inj">Blue = Injury</h4>
+                <h4 class="fat">Red = Fatality</h4>
             </th>
             <tr>
                 <td> <embed src="Maps/injury_fatality_map.html" class="IFMap" frameborder="0"></embed> </td>
@@ -99,7 +98,10 @@
         <h1>Non-Motorist Dashboard</h1>
         <table>
             <th>
-                <h2>Blue = Non-Motorist Crash</h2>
+                <h4>Blue = Non-Motorist Crash</h4>
+                <h5> The crashes represented are not for any specific type of non-motorist, just those who were not in a vehicle at the time of
+                    their crash. 
+                </h5>
             </th>
             <tr>
                 <td>
