@@ -1,0 +1,21 @@
+Drug,Severe,Count
+"Ethanol", "Fatal", 204
+"Ethanol", "Non-Fatal", 570
+"Cannabinoids", "Fatal", 91
+"Cannabinoids", "Non-Fatal", 263
+"Cocaine", "Fatal", 46
+"Cocaine", "Non-Fatal", 133
+"THC", "Fatal", 41
+"THC", "Non-Fatal", 135 
+"Methadone", "Fatal", 26
+"Methadone", "Non-Fatal", 111
+"Benzodiazepines", "Fatal", 33
+"Benzodiazepines", "Non-Fatal", 91
+"Opiate", "Fatal", 35
+"Opiate", "Non-Fatal", 79
+"Fentanyl", "Fatal", 19
+"Fentanyl", "Non-Fatal", 63
+"PCP", "Fatal", 22
+"PCP", "Non-Fatal",54
+"Amphetamine", "Fatal", 20
+"Amphetamine", "Non-Fatal", 42

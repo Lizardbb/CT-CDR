@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crash Data Repository</title>
+
+     <!-- Load c3.css -->
+     <link href="SCSS/tabstyle.css" rel="stylesheet">
+
+    <!-- Load d3.js and c3.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+</head>
+
+<body>
+    <button class="tablink" onclick="openPage('Home', this, 'darkblue')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('Toxicology', this, 'green')">Toxicology</button>
+    <button class="tablink" onclick="openPage('Injury', this, 'red')">Injury and Fatality</button>
+    <button class="tablink" onclick="openPage('Pedestrian', this, 'orange')">Non-Motorist</button>
+    <button class="tablink" onclick="openPage('Impaired Driver', this, 'coral')">Impaired Driver</button>
+    <button class="tablink" onclick="openPage('Demographics', this, 'brown')">Demographics</button>
+    <button class="tablink" onclick="openPage('Road Cond', this, 'aqua')">Road Conditions</button>
+    <button class="tablink" onclick="openPage('COVID', this, 'chartreuse')">Covid-19 Statistics</button>
+
+    <div id="Home" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+        </div>
+
+        <h1>Welcome to the Connecticut Crash Data Repository</h1>
+
+       <div class="box">
+            <h3>
+                Please select a tab to learn more! 
+            </h3>
+       </div>
+
+        <img src="campus-aerial-1170x365.jpg" alt="University of Connecticut Campus" class="UConnCamp"> 
+
+
+        <div class="blurb">
+            <h3>
+                The Connecticut Crash Data Repository (CTCDR) is a web tool designed to provide access to select crash information collected by state and local police. 
+                This data repository enables users to query, analyze and print/export the data for research and informational purposes. 
+                The CTCDR is comprised of crash data from two separate sources; The Department of Public Safety (DPS) and The Connecticut Department of Transportation (CTDOT).
+                
+                The purpose of the CTCDR is to provide members of the traffic-safety community with timely, accurate, complete and uniform crash data. The CTCDR allows for complex queries of both datasets such as, 
+                by date, route, route class, collision type, injury severity, etc. For further analysis, this data can be summarized by user-defined categories to help identify trends or patterns in the crash data.
+            </h3>
+        </div>
+
+    </div>
+
+    <div id="Toxicology" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+        <h1>Toxicology Dashboard</h1>
+
+    
+        <embed src="https://toxicology-dashboard.herokuapp.com/" class="ToxDash" style="overflow:hidden">
+
+    </div>
+
+    <div id="Injury" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+
+        <h1>Injury/Fatality Dashboard</h1>
+
+        <table>
+            <th>
+                <h4 class="inj">Blue = Injury</h4>
+                <h4 class="fat">Red = Fatality</h4>
+            </th>
+            <tr>
+                <td> <embed src="Maps/injury_fatality_map.html" class="IFMap" frameborder="0"></embed> </td>
+                <td> <embed src="https://injury-dashboard.herokuapp.com/" frameborder="0" class="InjuryGraph"></embed></td>
+            </tr>
+        </table>
+
+        
+        
+    </div>
+
+    <div id="Pedestrian" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+
+        <h1>Non-Motorist Dashboard</h1>
+        <table>
+            <th>
+                <h4>Blue = Non-Motorist Crash</h4>
+                <h5> The crashes represented are not for any specific type of non-motorist, just those who were not in a vehicle at the time of
+                    their crash. 
+                </h5>
+            </th>
+            <tr>
+                <td>
+                    <embed src="Non-motorist/nm_crash_map.html" class="NMMap">
+                </td>
+                <td>
+                    <embed src="https://non-motorist-dash.herokuapp.com/" class="NMDash">
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+    <div id="Impaired Driver" class="tabcontent">
+        <h1>Impaired Driver</h1>
+
+        
+    </div>
+
+
+    <div id="Demographics" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div> 
+
+        <h1>Demographics</h1>
+
+        <embed src="https://demographics-dashboard.herokuapp.com/" class="DemoDash">
+       
+    </div>
+
+
+    <div id="Road Cond" class="tabcontent">
+        <h1>Road Condition at Time of Crash</h1>
+
+        <table>
+            <tr>
+
+            </tr>
+        </table>
+
+    </div>
+
+
+
+    <div id="COVID" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+
+        <h1>Covid-19 Statistics</h1>
+        <embed src="Covid/c19crashestotal.html" class="COVID-Graph" frameborder="0" >
+        
+    </div>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+
+        // Show the specific tab content
+        document.getElementById(pageName).style.display = "block";
+
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
