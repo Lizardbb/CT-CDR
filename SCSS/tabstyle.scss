@@ -95,7 +95,8 @@ body, html {
     }
 
     embed.ToxDash {
-      width: 100%;
+      overflow: hidden;
+      width: 110em;
       height: 120%;
     }
   }
@@ -147,12 +148,14 @@ body, html {
     }
 
     embed.NMDash {
+      overflow: hidden;
       width: 65em;
       height: 100em;
       margin-bottom: 15%;
     }
   
     embed.NMMap {
+      overflow: hidden;
       padding-left: 4em;
       margin-bottom: 55em;
       width: 45em;
@@ -162,8 +165,9 @@ body, html {
 
   #COVID {
     embed.COVID-Graph {
-      width: 45em;
-      height: 45em;
+      overflow: hidden;
+      width: 65em;
+      height: 60em;
       margin-top: 3%;
       margin-left: 10%;
     }

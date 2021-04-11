@@ -94,7 +94,8 @@ body h1, html h1 {
 }
 
 #Toxicology embed.ToxDash {
-  width: 100%;
+  overflow: hidden;
+  width: 110em;
   height: 120%;
 }
 
@@ -139,12 +140,14 @@ body h1, html h1 {
 }
 
 #Pedestrian embed.NMDash {
+  overflow: hidden;
   width: 65em;
   height: 100em;
   margin-bottom: 15%;
 }
 
 #Pedestrian embed.NMMap {
+  overflow: hidden;
   padding-left: 4em;
   margin-bottom: 55em;
   width: 45em;
@@ -152,8 +155,9 @@ body h1, html h1 {
 }
 
 #COVID embed.COVID-Graph {
-  width: 45em;
-  height: 45em;
+  overflow: hidden;
+  width: 65em;
+  height: 60em;
   margin-top: 3%;
   margin-left: 10%;
 }
