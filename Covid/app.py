@@ -27,9 +27,6 @@ server = app.server
 
 #options = [{'label': t, 'value': t} for t in town_df]
 
-#DATA
-covid_df = pd.read_csv("c19total.csv") 
-
 
 #COMPONENTS 
 
@@ -60,7 +57,7 @@ navbar = dbc.Navbar(
 
 fig = px.bar(covid_df, x="Work_Zone_Relation", y="Total",
              color='Type', title = 'Covid Analytics',barmode='group',
-             height=400)
+             height=800)
 
 
 fig.update_layout({
@@ -77,9 +74,9 @@ app.layout = dbc.Container([
         dbc.Col(navbar,width = 12)
     ]),
     dbc.Row([
-        dbc.Col(dcc.Graph(figure = fig), width = 6
+        dbc.Col(dcc.Graph(figure = fig), width = 12
         ),  
-    ])
+    ]),
 ])
 
 if __name__ == '__main__':
