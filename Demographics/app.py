@@ -119,24 +119,7 @@ bottom_table = dbc.Table.from_dataframe(bottom_crashes_table_df, striped=True, b
 
 #creating navbar 
 navbar = dbc.Navbar(
-    [
-        html.A(
-            # Use row and col to control vertical alignment of logo / brand
-            dbc.Row(
-                [
-                    dbc.Col(html.Img(src=UCONN_LOGO, height="30px")),
-                    dbc.Col(dbc.NavbarBrand("Connecticut Crash Data Repository ", className="ml-2")),
-                ],
-                align="center",
-                no_gutters=True,
-            ),
-            href="https://plot.ly",
-        ),
-        dbc.NavbarToggler(id="navbar-toggler"),
-        #dbc.Collapse(dbc.Nav, id="navbar-collapse", navbar=True),
-    ],
-    color="darkblue",
-    dark=True,
+
 )
 
 #severity bar graph - CARD 
@@ -147,13 +130,11 @@ card_graph2 = dbc.Card(
 ###LAYOUT 
 app.layout = dbc.Container([
     #Navbar 
-    dbc.Row([
-        dbc.Col(navbar,width = 12)
-    ]),
+ 
 
     #title 
     dbc.Row([
-        dbc.Col(html.H2("Demographics Dashboard",
+        dbc.Col(html.H2(" ",
                         className='text-center text-primary mb-4'),
                         width = 12)
     ]),
@@ -178,10 +159,8 @@ app.layout = dbc.Container([
         ),
         dbc.Col(top_table),
         dbc.Col(bottom_table),
-    ]),
-    
-    html.Iframe(src=app.get_asset_url('ctmap.html'),
-                style={"height": "1067px", "width": "100%"})
+    ])
+
 ])
 
 

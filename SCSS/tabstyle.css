@@ -154,6 +154,10 @@ body h1, html h1 {
   height: 50em;
 }
 
+#Demographics h1 {
+  margin-left: 37%;
+}
+
 #COVID embed.COVID-Graph {
   overflow: hidden;
   width: 65em;
