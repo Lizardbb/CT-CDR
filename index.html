@@ -15,9 +15,9 @@
     <button class="tablink" onclick="openPage('Toxicology', this, 'green')">Toxicology</button>
     <button class="tablink" onclick="openPage('Injury', this, 'red')">Injury and Fatality</button>
     <button class="tablink" onclick="openPage('Pedestrian', this, 'orange')">Non-Motorist</button>
-    <button class="tablink" onclick="openPage('Impaired Driver', this, 'coral')">Impaired Driver</button>
-    <button class="tablink" onclick="openPage('Demographics', this, 'brown')">Demographics</button>
-    <button class="tablink" onclick="openPage('Road Cond', this, 'aqua')">Road Conditions</button>
+    <button class="tablink" onclick="openPage('VehicleStats', this, 'coral')">Vehicle Statistics</button>
+    <button class="tablink" onclick="openPage('Demographics', this, 'plum')">Demographics</button>
+    <button class="tablink" onclick="openPage('RoadCond', this, 'aqua')">Road Conditions</button>
     <button class="tablink" onclick="openPage('COVID', this, 'chartreuse')">Covid-19 Statistics</button>
 
     <div id="Home" class="tabcontent">
@@ -111,8 +111,8 @@
     </div>
 
 
-    <div id="Impaired Driver" class="tabcontent">
-        <h1>Impaired Driver</h1>
+    <div id="VehicleStats" class="tabcontent">
+        <h1>Vehicle Statistics</h1>
 
         
     </div>
@@ -131,14 +131,14 @@
     </div>
 
 
-    <div id="Road Cond" class="tabcontent">
+    <div id="RoadCond" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div> 
         <h1>Road Condition at Time of Crash</h1>
 
-        <table>
-            <tr>
-
-            </tr>
-        </table>
+        <embed src="https://road-cond-dash.herokuapp.com/" class="RoadCond-Dash">
 
     </div>
 

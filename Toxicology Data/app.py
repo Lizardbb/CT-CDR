@@ -81,7 +81,7 @@ app.layout=dbc.Container(
                      "colorway":["#7DF9FF"],
                      'font': {
                      'color': colors['text'],
-                     'size': 12,
+                     'size': 13,
                  }
                  },
         }

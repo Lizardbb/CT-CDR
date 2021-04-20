@@ -88,9 +88,9 @@ fig_2.update_layout({
 app.layout = dbc.Container([
     ###hollistic bar graph and table 
     dbc.Row([
-        dbc.Col(dcc.Graph(figure = fig), width = 6
+        dbc.Col(dcc.Graph(figure = fig), width = 9
         ),  
-        dbc.Col(dcc.Graph(figure = fig_2), width = 6
+        dbc.Col(dcc.Graph(figure = fig_2), width = 9
         ),
     ]),
     dbc.Row([
@@ -108,7 +108,7 @@ app.layout = dbc.Container([
             value='0-18',
             multi=False,
             clearable=False,
-            style={"width": "40%"}
+            style={"width": "50%"}
         ),
     ]),
     dbc.Col([html.Label(['Injuries by Town']),
@@ -119,7 +119,7 @@ app.layout = dbc.Container([
             searchable=False,
             multi=False,
             clearable=False,
-            style={"width": "40%", 'color': colors['background']}
+            style={"width": "50%", 'color': colors['background']}
         ),
         ],
         width = 6,
