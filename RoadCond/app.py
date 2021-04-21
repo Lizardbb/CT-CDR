@@ -138,9 +138,9 @@ def update_graph(town_dropdown):
 
     fig=px.pie(
             data_frame=dff,
-            labels=['Dry','Wet','Snow', 'Slush', 'Mud, Dirt, Gravel', 'Ice / Frost', 'Other'],
+            labels=['Dry','Standing Water','Wet','Snow', 'Slush','Ice / Frost', 'Moving Water', 'Sand', 'Mud', 'Dirt', 'Gravel', 'Oil', 'Other','Unknown'],
             values=town_dropdown,
-            names=['Dry','Wet','Snow', 'Slush', 'Mud, Dirt, Gravel', 'Ice / Frost', 'Other'],
+            names=['Dry','Standing Water','Wet','Snow', 'Slush','Ice / Frost', 'Moving Water', 'Sand', 'Mud', 'Dirt', 'Gravel', 'Oil', 'Other','Unknown'],
             hole=.3,
             )
 
@@ -159,4 +159,4 @@ def update_graph(town_dropdown):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=5500)
+    app.run_server(debug=True, port=5501)
