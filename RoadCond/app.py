@@ -83,9 +83,9 @@ the_graph.update_layout({
 app.layout = dbc.Container([
     ###hollistic bar graph and table 
     dbc.Row([
-        dbc.Col(dcc.Graph(figure = fig), width = 12
+        dbc.Col(dcc.Graph(figure = fig), width = 11
         ),  
-        dbc.Col(dcc.Graph(figure = fig_2), width = 12
+        dbc.Col(dcc.Graph(figure = fig_2), width = 11
         ),
     ]),
         
@@ -95,7 +95,7 @@ app.layout = dbc.Container([
         dbc.Col([
             dcc.Graph(figure = the_graph),
         ],
-        width = 12,
+        width = 11,
         )
     ]),
     dbc.Row([

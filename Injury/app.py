@@ -122,7 +122,7 @@ app.layout = dbc.Container([
             style={"width": "50%", 'color': colors['background']}
         ),
         ],
-        width = 6,
+        width = 5,
         ),
         
         ]),
