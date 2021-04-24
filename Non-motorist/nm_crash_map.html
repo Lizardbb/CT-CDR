@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mappy</title>
+    <title>Non Motorist</title>
 
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
@@ -15,35 +15,15 @@
     </style>
 </head>
 <body>
-<div id="map"></div>
+    <div id="map"></div>
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoibGl6YXJkYmIiLCJhIjoiY2tsc2l5cDZ4MDhjejJ3cXY1cDZyc2pkdiJ9.bth09gfNExbzhdMisJmNvw';
             var map = new mapboxgl.Map({
             container: 'map', // container id
-            style: 'mapbox://styles/mapbox/streets-v11', // style URL
+            style: 'mapbox://styles/lizardbb/ckmva0ibf0bv817rpdachly3b', // style URL
             center: [-72.479, 41.575], // starting position [lng, lat]
-            zoom: 8.5 // starting zoom
+            zoom: 7.5 // starting zoom
         });
-
-        var marker = new mapboxgl.Marker()
-        .setLngLat([-72.8634, 41.6757])
-        .addTo(map);
-
-        var marker = new mapboxgl.Marker()
-        .setLngLat([-72.8634, 41.5475])
-        .addTo(map);
-        var marker = new mapboxgl.Marker()
-        .setLngLat([-72.8455, 42.6759])
-        .addTo(map);
-        var marker = new mapboxgl.Marker()
-        .setLngLat([-72.8540, 41.5748])
-        .addTo(map);
-        var marker = new mapboxgl.Marker()
-        .setLngLat([-72.7653, 41.6757])
-        .addTo(map);
-        var marker = new mapboxgl.Marker()
-        .setLngLat([-72.455, 41.455])
-        .addTo(map);
         
     </script>
 </body>

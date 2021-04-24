@@ -1,0 +1,247 @@
+﻿CrashTimeHour,Description,Count
+Midnight,Dry,2493
+Midnight,Ice / Frost,61
+Midnight,Moving Water,1
+Midnight,"Mud, Dirt, Gravel",7
+Midnight,Other,2
+Midnight,Sand,3
+Midnight,Slush,29
+Midnight,Snow,71
+Midnight,Standing Water,5
+Midnight,Wet,663
+1am,Dry,2116
+1am,Ice / Frost,62
+1am,"Mud, Dirt, Gravel",3
+1am,Other,3
+1am,Sand,4
+1am,Slush,20
+1am,Snow,65
+1am,Standing Water,2
+1am,Wet,581
+2am,Dry,1796
+2am,Ice / Frost,53
+2am,Oil,1
+2am,Other,1
+2am,Sand,2
+2am,Slush,16
+2am,Snow,54
+2am,Standing Water,2
+2am,Wet,539
+3am,Dry,1082
+3am,Ice / Frost,58
+3am,"Mud, Dirt, Gravel",3
+3am,Other,3
+3am,Sand,1
+3am,Slush,10
+3am,Snow,41
+3am,Standing Water,3
+3am,Wet,338
+4am,Dry,966
+4am,Ice / Frost,63
+4am,"Mud, Dirt, Gravel",1
+4am,Other,1
+4am,Slush,21
+4am,Snow,64
+4am,Standing Water,1
+4am,Wet,297
+5am,Dry,1409
+5am,Ice / Frost,120
+5am,"Mud, Dirt, Gravel",3
+5am,Other,1
+5am,Sand,3
+5am,Slush,32
+5am,Snow,101
+5am,Standing Water,5
+5am,Wet,449
+6am,Dry,3328
+6am,Ice / Frost,220
+6am,Moving Water,3
+6am,"Mud, Dirt, Gravel",3
+6am,Oil,1
+6am,Other,3
+6am,Sand,3
+6am,Slush,79
+6am,Snow,175
+6am,Standing Water,4
+6am,Wet,897
+7am,Dry,6580
+7am,Ice / Frost,371
+7am,Moving Water,3
+7am,"Mud, Dirt, Gravel",4
+7am,Oil,1
+7am,Other,5
+7am,Sand,7
+7am,Slush,130
+7am,Snow,273
+7am,Standing Water,8
+7am,Wet,1632
+8am,Dry,7871
+8am,Ice / Frost,253
+8am,"Mud, Dirt, Gravel",9
+8am,Oil,1
+8am,Other,12
+8am,Sand,7
+8am,Slush,169
+8am,Snow,232
+8am,Standing Water,5
+8am,Wet,1725
+9am,Dry,6974
+9am,Ice / Frost,141
+9am,Moving Water,4
+9am,"Mud, Dirt, Gravel",7
+9am,Other,12
+9am,Sand,7
+9am,Slush,116
+9am,Snow,156
+9am,Standing Water,3
+9am,Wet,1345
+10am,Dry,7325
+10am,Ice / Frost,79
+10am,Moving Water,3
+10am,"Mud, Dirt, Gravel",10
+10am,Other,6
+10am,Sand,7
+10am,Slush,86
+10am,Snow,104
+10am,Standing Water,2
+10am,Wet,1261
+11am,Dry,8566
+11am,Ice / Frost,60
+11am,Moving Water,1
+11am,"Mud, Dirt, Gravel",10
+11am,Oil,1
+11am,Other,10
+11am,Sand,2
+11am,Slush,64
+11am,Snow,126
+11am,Standing Water,3
+11am,Wet,1268
+Noon,Dry,10498
+Noon,Ice / Frost,61
+Noon,Moving Water,5
+Noon,"Mud, Dirt, Gravel",12
+Noon,Oil,1
+Noon,Other,5
+Noon,Sand,7
+Noon,Slush,64
+Noon,Snow,143
+Noon,Standing Water,3
+Noon,Wet,1543
+1pm,Dry,10510
+1pm,Ice / Frost,67
+1pm,Moving Water,5
+1pm,"Mud, Dirt, Gravel",19
+1pm,Oil,2
+1pm,Other,5
+1pm,Sand,7
+1pm,Slush,47
+1pm,Snow,151
+1pm,Standing Water,3
+1pm,Wet,1649
+2pm,Dry,11896
+2pm,Ice / Frost,66
+2pm,Moving Water,5
+2pm,"Mud, Dirt, Gravel",15
+2pm,Oil,1
+2pm,Other,7
+2pm,Sand,10
+2pm,Slush,56
+2pm,Snow,311
+2pm,Standing Water,9
+2pm,Wet,1828
+3pm,Dry,13445
+3pm,Ice / Frost,97
+3pm,Moving Water,7
+3pm,"Mud, Dirt, Gravel",16
+3pm,Oil,1
+3pm,Other,11
+3pm,Sand,12
+3pm,Slush,73
+3pm,Snow,356
+3pm,Standing Water,5
+3pm,Wet,2187
+4pm,Dry,13640
+4pm,Ice / Frost,111
+4pm,Moving Water,6
+4pm,"Mud, Dirt, Gravel",19
+4pm,Oil,2
+4pm,Other,5
+4pm,Sand,7
+4pm,Slush,84
+4pm,Snow,383
+4pm,Standing Water,8
+4pm,Wet,2404
+5pm,Dry,14114
+5pm,Ice / Frost,139
+5pm,Moving Water,10
+5pm,"Mud, Dirt, Gravel",6
+5pm,Oil,1
+5pm,Other,4
+5pm,Sand,7
+5pm,Slush,68
+5pm,Snow,404
+5pm,Standing Water,4
+5pm,Wet,2802
+6pm,Dry,9580
+6pm,Ice / Frost,108
+6pm,Moving Water,4
+6pm,"Mud, Dirt, Gravel",9
+6pm,Oil,2
+6pm,Other,2
+6pm,Sand,4
+6pm,Slush,61
+6pm,Snow,269
+6pm,Standing Water,3
+6pm,Wet,2024
+7pm,Dry,6534
+7pm,Ice / Frost,62
+7pm,Moving Water,5
+7pm,"Mud, Dirt, Gravel",20
+7pm,Oil,2
+7pm,Other,7
+7pm,Sand,5
+7pm,Slush,44
+7pm,Snow,186
+7pm,Standing Water,4
+7pm,Wet,1408
+8pm,Dry,5452
+8pm,Ice / Frost,81
+8pm,Moving Water,1
+8pm,"Mud, Dirt, Gravel",12
+8pm,Oil,1
+8pm,Other,5
+8pm,Sand,6
+8pm,Slush,58
+8pm,Snow,192
+8pm,Standing Water,3
+8pm,Wet,1260
+9pm,Dry,4803
+9pm,Ice / Frost,72
+9pm,"Mud, Dirt, Gravel",7
+9pm,Other,5
+9pm,Sand,4
+9pm,Slush,43
+9pm,Snow,170
+9pm,Standing Water,4
+9pm,Wet,1068
+10pm,Dry,3869
+10pm,Ice / Frost,70
+10pm,Moving Water,6
+10pm,"Mud, Dirt, Gravel",11
+10pm,Oil,1
+10pm,Other,6
+10pm,Sand,4
+10pm,Slush,35
+10pm,Snow,151
+10pm,Standing Water,2
+10pm,Wet,956
+11pm,Dry,3126
+11pm,Ice / Frost,67
+11pm,Moving Water,2
+11pm,"Mud, Dirt, Gravel",11
+11pm,Other,2
+11pm,Sand,3
+11pm,Slush,39
+11pm,Snow,110
+11pm,Standing Water,4
+11pm,Wet,817

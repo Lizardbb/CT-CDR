@@ -21,7 +21,6 @@ severity2_df = pd.read_csv("DrugFatalTwoCollim30-4.csv")
 age_df = pd.read_csv("drugByAgeGroupLinear.csv")
 gender_df = pd.read_csv("drugBySex.csv")
 dropage_df = pd.read_csv("totaleddrugbyage.csv")
-agency_df = pd.read_csv("drugsPerAgencyTop10Drugs.csv")
 #STYLING EXTRAS
 UCONN_LOGO = "https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png"
 
@@ -32,9 +31,6 @@ colors = {
 ###STYLESHEET
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG])
 
-server = app.server
-
-
 #navbar 
 navbar = dbc.Navbar(
     [
@@ -42,15 +38,17 @@ navbar = dbc.Navbar(
             # Use row and col to control vertical alignment of logo / brand
             dbc.Row(
                 [
-    
+                    dbc.Col(html.Img(src=UCONN_LOGO, height="30px")),
+                    dbc.Col(dbc.NavbarBrand("Connecticut Crash Data Repository ", className="ml-2")),
                 ],
                 align="center",
                 no_gutters=True,
             ),
+            href="https://plot.ly",
         ),
         dbc.NavbarToggler(id="navbar-toggler"),
     ],
-    color="black",
+    color="darkblue",
     dark=True,
 )
 
@@ -81,7 +79,7 @@ app.layout=dbc.Container(
                      "colorway":["#7DF9FF"],
                      'font': {
                      'color': colors['text'],
-                     'size': 13,
+                     'size': 12,
                  }
                  },
         }
@@ -96,7 +94,7 @@ app.layout=dbc.Container(
         dbc.Col([
             html.P("Select Drug:",
                    style={"textDecoration": "underline"}),
-            dcc.Dropdown(id='my-dpdn', multi=False, value=severity_df['Drug'][0],
+            dcc.Dropdown(id='my-dpdn', multi=False, value='Ethanol',
                          options=[{'label':x, 'value':x}
                                   for x in severity_df['Drug'].unique()],
                          ),
@@ -139,37 +137,15 @@ app.layout=dbc.Container(
         ], 
         width = 4,
         ),
-        # dbc.Col([
-        #     html.P("Select Agency:",
-        #     style={"textDecoration": "underline"}),
-        #     dcc.Dropdown(id='agencydpdn', multi=False, value = agency_df['Agency'][0],
-        #     options = [{'label':x, 'value':x}
-        #                           for x in agency_df['Agency'].unique()],
-        #     ),
-        # ],
-        # width = 4,
-        # ),
-        # dbc.Col([
-        #     html.P("Select Agency:",
-        #     style={"textDecoration": "underline"}),
-        #     dcc.Dropdown(id='agencydpdn', multi=False, value = 'Berlin Police Department',
-        #     options = [{'label': 'Berlin Police Department', 'value': 'Berlin Police Department'},
-        #     {'label':'Bethel Police Department', 'value': 'Bethel Police Department'}
-        #     ],
-
-        #     ),
-        # ],
-        # width = 4,
-        # ),   
-        ]),
-    
+        #dcc.Graph(id ="age-fig", figure ={}),
+    ]),
 
     dbc.Row([
-        dbc.Col(
-            dcc.Graph(id='pie_chart'),
-        width = 12),
+        dcc.Graph(id='pie_chart')
     ]),
-    ])
+
+    ],
+)
 
 
 
@@ -203,7 +179,7 @@ def update_bar_chart(drug):
 
 def update_age_chart(drug):
     mask = age_df["Drug"] == drug
-    fig = px.bar(age_df[mask], y="Age_Group", x="Count",#orientation = 'h', #color = "Severity",
+    fig = px.bar(age_df[mask], y="Age_Group", x="Count",orientation = 'h', #color = "Severity",
                  barmode="group")
     fig.update_layout({
         "title":{
@@ -256,7 +232,6 @@ def update_graph(dropdown_age):
         values = dropdown_age,
         names = 'Drug',
         hole = 0.3,
-        
     )
     fig.update_layout({
         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
@@ -266,65 +241,12 @@ def update_graph(dropdown_age):
                     'size': 11
                 }
     })
-    return fig
 
-
-
-
-# @app.callback(
-#     Output(component_id='pie_chart_2',component_property='figure'),
-#     [Input(component_id='agencydpdn',component_property='value')]
-# )
-
-# def update_pie_graph(agencydpdn):
-#     dff = agency_df
-#     fig = px.pie(
-#         data_frame = dff,
-#         values = agencydpdn ,
-#         names = 'Drug',
-#         hole = 0.3,
-#     )
-#     fig.update_layout({
-#         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
-#         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
-#         'font': {
-#                     'color': colors['text'],
-#                     'size': 11
-#                 }
-#     })
-#     return fig
-
-
-
-
-
-# def update_age_chart(location):
-#     mask = agency_df["Agency"] == location
-#     fig = px.bar(agency_df[mask], x="Drug", y="Count", #color = "Severity",
-#     )
-#     fig.update_layout({
-#         "title":{
-#                         "text": "Drug Use by Gender",
-#                         "x": 0.05,
-#                         "xanchor": "left",
-#                     },
-#         'plot_bgcolor': 'rgba(0, 0, 0, 0)',
-#         'paper_bgcolor': 'rgba(0, 0, 0, 0)',
-#         'colorway': ["#7DF9FF"],
-#         'font': {
-#                     'color': colors['text'],
-#                     'size': 11
-#                 }
-#         })
-#     return fig
-
-
-
-
-
+    
+    return(fig)
 
 
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8800)
+    app.run_server(debug=True)

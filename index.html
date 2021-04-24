@@ -4,40 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Crash Data Repository</title>
 
-     <!-- Load c3.css -->
+     <!-- Load css -->
      <link href="SCSS/tabstyle.css" rel="stylesheet">
-
-    <!-- Load d3.js and c3.js -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
 </head>
 
 <body>
-    <button class="tablink" onclick="openPage('Home', this, 'lightblue')">Home</button>
-    <button class="tablink" onclick="openPage('Toxicology', this, 'green')" id="defaultOpen">Toxicology</button>
-    <button class="tablink" onclick="openPage('Injury', this, 'purple')">Injury and Fatality</button>
-    <button class="tablink" onclick="openPage('Pedestrian', this, 'pink')">Pedestrian</button>
-    <button class="tablink" onclick="openPage('Motorcycle', this, 'red')">Motorcycle</button>
-    <button class="tablink" onclick="openPage('Impaired Driver', this, 'pink')">Impaired Driver</button>
-    <button class="tablink" onclick="openPage('Demographics', this, 'yellow')">Demographics</button>
-    <button class="tablink" onclick="openPage('Road Cond', this, 'blue')">Road Condition at Time of Crash</button>
-    <button class="tablink" onclick="openPage('Statistics', this, 'pink')">Vehicle Statistics</button>
-    <button class="tablink" onclick="openPage('Covid', this, 'pink')">Covid-19 Statistics</button>
+    <button class="tablink" onclick="openPage('Home', this, 'darkblue')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('Toxicology', this, 'green')">Toxicology</button>
+    <button class="tablink" onclick="openPage('Injury', this, 'red')">Injury and Fatality</button>
+    <button class="tablink" onclick="openPage('Pedestrian', this, 'orange')">Non-Motorist</button>
+    <button class="tablink" onclick="openPage('VehicleStats', this, 'coral')">Vehicle Statistics</button>
+    <button class="tablink" onclick="openPage('Demographics', this, 'plum')">Demographics</button>
+    <button class="tablink" onclick="openPage('RoadCond', this, 'aqua')">Road Conditions</button>
+    <button class="tablink" onclick="openPage('COVID', this, 'chartreuse')">Covid-19 Statistics</button>
 
     <div id="Home" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+        </div>
+
         <h1>Welcome to the Connecticut Crash Data Repository</h1>
 
-       <!--  <iframe src="ctmap.html" height = "100%" width = "100%" frameborder="0" scrolling ="no"></iframe> -->
+       <div class="box">
+            <h3>
+                Please select a tab to learn more! 
+            </h3>
+       </div>
 
-        <iframe src="roadmap.html" frameborder="0"></iframe>
+        <img src="campus-aerial-1170x365.jpg" alt="University of Connecticut Campus" class="UConnCamp"> 
+
+
+        <div class="blurb">
+            <h3>
+                The Connecticut Crash Data Repository (CTCDR) is a web tool designed to provide access to select crash information collected by state and local police. 
+                This data repository enables users to query, analyze and print/export the data for research and informational purposes. 
+                The CTCDR is comprised of crash data from two separate sources; The Department of Public Safety (DPS) and The Connecticut Department of Transportation (CTDOT).
+                
+                The purpose of the CTCDR is to provide members of the traffic-safety community with timely, accurate, complete and uniform crash data. The CTCDR allows for complex queries of both datasets such as, 
+                by date, route, route class, collision type, injury severity, etc. For further analysis, this data can be summarized by user-defined categories to help identify trends or patterns in the crash data.
+            </h3>
+        </div>
 
     </div>
 
     <div id="Toxicology" class="tabcontent">
-        <h1>Toxicology Report Data</h1>
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+        <h1>Toxicology Dashboard</h1>
 
     
         <embed src="https://toxicology-dashboard.herokuapp.com/" class="ToxDash" style="overflow:hidden">
@@ -45,25 +62,21 @@
     </div>
 
     <div id="Injury" class="tabcontent">
-        <h1>Injury/Fatality</h1>
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+
+        <h1>Injury/Fatality Dashboard</h1>
 
         <table>
-            <tr>
-                <td> <h4>Blue = Injury, Red = Fatality</h4></td>
-                <td><h4>Injuries by Age Group</h4></td>
-                <td><h4>Injuries by Town</h4></td>
-            </tr>
+            <th>
+                <h4 class="inj">Blue = Injury</h4>
+                <h4 class="fat">Red = Fatality</h4>
+            </th>
             <tr>
                 <td> <embed src="Maps/injury_fatality_map.html" class="IFMap" frameborder="0"></embed> </td>
                 <td> <embed src="https://injury-dashboard.herokuapp.com/" frameborder="0" class="InjuryGraph"></embed></td>
-                <td> <embed src="https://town-injury-dashboard.herokuapp.com/" class="TownInjuryGraph"></td>
-            </tr>
-            <tr>
-                <td></td>
-            </tr>
-            <tr>
-                <td> <embed src="Injury/workzonecrashes.html" class="WorkZone"></td>
-                <td> <embed src="Injury/buscrashes.html" class="BusCrash"></td>
             </tr>
         </table>
 
@@ -72,53 +85,73 @@
     </div>
 
     <div id="Pedestrian" class="tabcontent">
-        <h1>Pedestrian Crashes</h1>
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
 
-    </div>
-
-    <div id="Motorcycle" class="tabcontent">
-        <h1>Motorcyclen Crashes</h1>
-
-        
+        <h1>Non-Motorist Dashboard</h1>
         <table>
+            <th>
+                <h4>Blue = Non-Motorist Crash</h4>
+                <h5> The crashes represented are not for any specific type of non-motorist, just those who were not in a vehicle at the time of
+                    their crash. 
+                </h5>
+            </th>
             <tr>
-            <td><iframe class="MotorMap" src="roadmap.html" frameborder="0"></iframe></td>
+                <td>
+                    <embed src="Non-motorist/nm_crash_map.html" class="NMMap">
+                </td>
+                <td>
+                    <embed src="https://non-motorist-dash.herokuapp.com/" class="NMDash">
+                </td>
             </tr>
         </table>
+
     </div>
 
-    <div id="Impaired Driver" class="tabcontent">
-        <h1>Impaired Driver</h1>
+
+    <div id="VehicleStats" class="tabcontent">
+        <h1>Vehicle Statistics</h1>
 
         
     </div>
 
 
     <div id="Demographics" class="tabcontent">
-        <h1>Demographics</h1>
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div> 
+
+        <h1>Demographics Dashboard</h1>
 
         <embed src="https://demographics-dashboard.herokuapp.com/" class="DemoDash">
        
     </div>
 
 
-    <div id="Road Cond" class="tabcontent">
+    <div id="RoadCond" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div> 
         <h1>Road Condition at Time of Crash</h1>
-        <h2>Shit on the road (poop)</h2>
 
-        <table>
-            <tr>
-            <td> <iframe src="weather_graph.html" frameborder="0" class="Weather"></iframe></td>
-            <td><iframe src="LightConditionsGraph.html" class="LightGraph" frameborder="0"></iframe> </td>
-            </tr>
-        </table>
+        <embed src="https://road-cond-dash.herokuapp.com/" class="RoadCond-Dash">
 
     </div>
 
 
-    <div id="Statistics" class="tabcontent">
-        <h1>Vehicle Statistics</h1>
 
+    <div id="COVID" class="tabcontent">
+        <div class="header">
+            <img src="https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png" alt="Uconn logo" class="Logo">
+            <h4>Connecticut Crash Data Repository</h4>
+        </div>
+
+        <h1>Covid-19 Statistics</h1>
+        <embed src="https://covid-19-page.herokuapp.com/" class="COVID-Graph" frameborder="0" >
         
     </div>
 

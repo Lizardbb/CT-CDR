@@ -9,22 +9,59 @@ body, html {
 
 body h1, html h1 {
   color: white;
-  margin-left: 41%;
+}
+
+.header {
+  height: 3%;
+  width: 100%;
+  background-color: darkblue;
+  margin-left: -2em;
+  margin-top: -3em;
+  padding: 1rem 0 1rem 3rem;
+}
+
+.header .Logo {
+  width: 6%;
+  display: inline;
+  margin-top: .5rem;
+}
+
+.header h4 {
+  display: inline;
+  margin-left: 1em;
+  margin-top: -2em;
+}
+
+#Home {
+  background-color: black;
+}
+
+#Home .box {
+  outline: 3px solid blue;
+  margin-left: 20em;
+  width: 16em;
+}
+
+#Home .box h3 {
+  padding: 1em;
 }
 
 #Home h1 {
-  margin-left: 34%;
+  margin-left: 30%;
 }
 
-#Home iframe {
-  width: 50%;
-  height: 70%;
-  margin-left: 24%;
+#Home .blurb {
+  width: 55%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 26%;
+  margin-top: -25em;
 }
 
-#Home table {
-  width: 100%;
-  height: 100%;
+#Home img {
+  margin-bottom: 30em;
+  margin-left: 20%;
 }
 
 /* Style tab links */
@@ -36,8 +73,8 @@ body h1, html h1 {
   outline: none;
   cursor: pointer;
   padding: 1em 1.5em;
-  font-size: 17px;
-  width: 20%;
+  font-size: 16px;
+  width: 12.5%;
 }
 
 .tablink:hover {
@@ -52,94 +89,185 @@ body h1, html h1 {
   height: 100%;
 }
 
-iframe.CrashesbyDrugType {
+#Toxicology h1 {
+  margin-left: 40%;
+}
+
+#Toxicology embed.ToxDash {
   overflow: hidden;
-  padding-top: 5em;
-  float: left;
+  width: 110em;
+  height: 120%;
+}
+
+#Injury h1 {
+  margin-left: 45%;
+}
+
+#Injury .inj {
+  color: blue;
+  margin-right: 80%;
+}
+
+#Injury .fat {
+  color: red;
+  margin-right: 80%;
+}
+
+#Injury embed.InjuryGraph {
+  overflow: hidden;
   width: 70em;
-}
-
-iframe.DrugsDonut {
-  padding-top: 5em;
-  margin-left: 50%;
-  width: 50em;
-}
-
-iframe.DrugsDonut, iframe.CrashesbyDrugType {
-  height: 50vh;
-}
-
-iframe.LightGraph {
-  overflow: hidden;
-  float: right;
-  width: 50em;
-  height: 60em;
-}
-
-iframe.Weather {
-  overflow: hidden;
-  float: left;
-  width: 40em;
-  height: 60em;
-}
-
-iframe.MotorMap {
-  overflow: hidden;
-  width: 40em;
-  height: 40em;
-}
-
-embed.InjuryGraph {
-  overflow: hidden;
-  width: 40em;
-  height: 50em;
+  height: 100vh;
   margin: 0;
+  padding: 0;
+  margin-bottom: 30%;
+}
+
+#Injury embed.IFMap {
+  width: 45em;
+  height: 55em;
+  padding-left: 1em;
+  margin-bottom: 50%;
+}
+
+#Pedestrian h1 {
+  margin-left: 40%;
+}
+
+#Pedestrian h3 {
+  margin-top: -1em;
+  margin-left: 2em;
   padding: 0;
 }
 
-embed.TownInjuryGraph {
+#Pedestrian embed.NMDash {
   overflow: hidden;
-  width: 40em;
-  height: 50em;
-  margin-left: -15em;
+  width: 65em;
+  height: 100em;
+  margin-bottom: 15%;
 }
 
-embed.IFMap {
-  width: 60em;
-  height: 50em;
-  padding-left: 1em;
-}
-
-embed.WorkZone {
+#Pedestrian embed.NMMap {
   overflow: hidden;
-  width: 60em;
-  height: 50em;
-  padding-left: 1em;
-}
-
-embed.BusCrash {
-  overflow: hidden;
-  width: 60em;
+  padding-left: 4em;
+  margin-bottom: 55em;
+  width: 45em;
   height: 50em;
 }
 
-#injury h4 {
-  margin-left: 3em;
+#Demographics h1 {
+  margin-left: 37%;
 }
 
-embed.ToxDash {
+#Demographics embed.DemoDash {
   width: 100%;
   height: 110%;
 }
 
-embed.DemoDash {
-  width: 100%;
-  height: 110%;
+#COVID embed.COVID-Graph {
+  overflow: hidden;
+  width: 65em;
+  height: 60em;
+  margin-top: 3%;
+  margin-left: 10%;
 }
 
-#Home {
-  background-color: lightblue;
+#COVID h1 {
+  margin-left: 45%;
+}
+
+#RoadCond h1 {
+  margin-left: 36%;
+}
+
+#RoadCond embed.RoadCond-Dash {
+  width: 100%;
+  height: 110%;
 }
 
 /* Media Queries */
+/*1. 1600px screens and below (rather small)*/
+@media screen and (max-width: 1600px) {
+  /*Header*/
+  .header {
+    height: 3%;
+    width: 100%;
+    background-color: darkblue;
+    margin-left: -2em;
+    margin-top: -3em;
+    padding: 1rem 0 1rem 3rem;
+  }
+  .header .Logo {
+    width: 7%;
+    display: inline;
+    margin-top: .6rem;
+    margin-right: 70%;
+  }
+  .header h4 {
+    display: inline;
+    margin-top: -1em;
+    margin-left: -55em;
+  }
+  /*Home Page*/
+  #Home {
+    width: 100%;
+  }
+  #Home .box {
+    border: 2px solid navy;
+    width: 16%;
+    height: 10%;
+    margin-left: 12%;
+  }
+  #Home .box h4 {
+    margin-left: 8em;
+    padding: 3em;
+    width: 19em;
+  }
+  #Home img {
+    margin-right: 20%;
+  }
+  #Home .blurb {
+    width: 60%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 15%;
+    margin-top: -30em;
+  }
+  /*Tox*/
+  /* Non Motorist */
+  #Pedestrian embed.NMMap {
+    width: 30em;
+    height: 35em;
+  }
+  #Pedestrian embed.NMDash {
+    width: 55em;
+    height: 100vh;
+    margin-bottom: 30em;
+  }
+  #Pedestrian h2 {
+    margin-top: 1em;
+    margin-left: 3em;
+    padding: 0;
+  }
+  /*Injury Fatality*/
+  #Injury tr {
+    margin-top: -3em;
+  }
+  #Injury embed.InjuryGraph {
+    overflow: hidden;
+    width: 57em;
+    height: 100vh;
+  }
+  #Injury embed.IFMap {
+    width: 35em;
+    height: 40em;
+    padding-left: 1em;
+  }
+  #Injury h1 {
+    margin-left: 37%;
+  }
+}
+
+/*Between 1801px and 3000px (Small to Medium Screens)*/
+/*Above*/
 /*# sourceMappingURL=tabstyle.css.map */
