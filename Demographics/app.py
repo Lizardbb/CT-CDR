@@ -138,17 +138,21 @@ state_df = pd.read_csv("crashTownsByState.csv")
 state_town_list = []
 state_state_list = []
 state_count_list = []
-state_list = ['UT','NC','WI','ON','SI','MA','MI','NB','TN','NH','AK','OK','KY','OT','CO','NV','SD','PA','CH','WV','GA','RI','IN','MX','DC','BC','MD','OR','QC','CT','AR','MN','AL','ID','TX','NM','CU','NS','ND','ME','PR','IL','MO','SC','YT','DE','FL','TA','MP','CA','WY','HI','OH','NE','VT','NY','MS','NJ','AB','IA','KS','LA','WA','PE','MB','AZ','VA','MT']
+state_list = ['UT','NC','WI','ON','SI','MA','MI','NB','TN','NH','AK','OK','KY','OT','CO','NV','SD','PA','CH','WV','GA','RI','IN','MX','DC','BC','MD','OR','QC','AR','MN','AL','ID','TX','NM','CU','NS','ND','ME','PR','IL','MO','SC','YT','DE','FL','TA','MP','CA','WY','HI','OH','NE','VT','NY','MS','NJ','AB','IA','KS','LA','WA','PE','MB','AZ','VA','MT']
 
 
 for j in range(len(town_list)):
-    for i in range(len(state_df.columns)-1):
+    for i in range(len(state_list)):
         state_town_list.append(town_list[j])
 
 for i in range(len(town_list)):
     state_state_list += state_list
 
-state_count_list = state_df.loc[:,state_df.columns!="Town"].values.flatten().tolist()
+filtered_df = state_df.drop(['Town', 'CT'], axis=1)
+
+
+state_count_list = filtered_df.values.flatten().tolist()
+
 
 
 state_df = pd.DataFrame(
@@ -353,7 +357,7 @@ def update_bar_chart(Town):
                  barmode="group")
     fig3.update_layout({
         "title":{
-                        "text": "State Registration of Cases by Town",
+                        "text": "Out of State Registration of Cases by Town",
                         "x": 0.05,
                         "xanchor": "left",
                     },
