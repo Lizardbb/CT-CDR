@@ -122,7 +122,7 @@ for i in range(len(town_list)-1):
     age_count_list.append(sixtyfive[i])
 
 
-
+#Creation of age data frame
 age_df = pd.DataFrame(
     {
         "Town": age_town_list,
@@ -130,6 +130,60 @@ age_df = pd.DataFrame(
         "Count": age_count_list,
     }
 )
+
+#state list builder
+
+state_df = pd.read_csv("crashTownsByState.csv")
+
+state_town_list = []
+state_state_list = []
+state_count_list = []
+state_list = ['UT','NC','WI','ON','SI','MA','MI','NB','TN','NH','AK','OK','KY','OT','CO','NV','SD','PA','CH','WV','GA','RI','IN','MX','DC','BC','MD','OR','QC','CT','AR','MN','AL','ID','TX','NM','CU','NS','ND','ME','PR','IL','MO','SC','YT','DE','FL','TA','MP','CA','WY','HI','OH','NE','VT','NY','MS','NJ','AB','IA','KS','LA','WA','PE','MB','AZ','VA','MT']
+
+
+for j in range(len(town_list)):
+    for i in range(len(state_df.columns)-1):
+        state_town_list.append(town_list[j])
+
+for i in range(len(town_list)):
+    state_state_list += state_list
+
+state_count_list = state_df.loc[:,state_df.columns!="Town"].values.flatten().tolist()
+
+
+state_df = pd.DataFrame(
+    {
+        "Town": state_town_list,
+        "State": state_state_list,
+        "Count": state_count_list,
+    }
+)
+
+#creation of sex data frame
+
+sex_df = pd.read_csv("crashTownsBySex.csv")
+
+sex_town_list = []
+sex_sex_list = []
+sex_count_list = []
+
+for i in range(len(town_list)):
+    sex_town_list.append(town_list[i])
+    sex_town_list.append(town_list[i])
+    sex_sex_list += ['M', 'F']
+
+sex_count_list = sex_df.loc[:,sex_df.columns!="Town"].values.flatten().tolist()
+
+
+
+sex_df = pd.DataFrame(
+    {
+        "Town": sex_town_list,
+        "Sex": sex_sex_list,
+        "Count": sex_count_list,
+    }
+)
+
 
 #STYLING EXTRAS
 UCONN_LOGO = "https://production.wordpress.uconn.edu/techpark2018/wp-content/uploads/sites/2664/2018/12/uconn-wordmark-single-white.png"
@@ -194,6 +248,16 @@ card_graph3 = dbc.Card(
         dcc.Graph(id='age-fig', figure={}),body=True, className= 'card border-primary mb-3',
 )
 
+#State group bar graph - CARD
+card_graph4 = dbc.Card(
+        dcc.Graph(id='state-fig', figure={}),body=True, className= 'card border-primary mb-3',
+)
+
+#Sex group bar graph - CARD
+card_graph5 = dbc.Card(
+        dcc.Graph(id='sex-fig', figure={}),body=True, className= 'card border-primary mb-3',
+)
+
 ###LAYOUT 
 app.layout = dbc.Container([
     #Navbar 
@@ -201,7 +265,7 @@ app.layout = dbc.Container([
 
     #title 
     dbc.Row([
-        dbc.Col(html.H2(" ",
+        dbc.Col(html.H2("Demographics",
                         className='text-center text-primary mb-4'),
                         width = 12)
     ]),
@@ -214,24 +278,31 @@ app.layout = dbc.Container([
     dbc.Row([
         html.P("Select Town:  ",
                    style={"textDecoration": "underline"}),
-            dcc.Dropdown(id='my-dpdn', multi=False, value='Andover', style={'height': '30px', 'width': "50%"},
+            
+    ]),
+
+    dbc.Row([dcc.Dropdown(id='my-dpdn', multi=False, value='Andover', style={'height': '40px', 'width': "50%", 'padding': "-10px"},
                          options=[{'label':x, 'value':x}
                                   for x in severity_df['Town'].unique()],
-                         )
+                         )]),
+
+    dbc.Row([
+        dbc.Col(card_graph2, style={'height': "90%"}),
+        dbc.Col(card_graph5, style={'height': "90%"}),
     ]),
 
     dbc.Row([
-        dbc.Col(card_graph2),
-        dbc.Col(card_graph3),
+        dbc.Col(card_graph4, style={'height': "90%"}),
+    ]),
+
+    dbc.Row([
+        dbc.Col(card_graph3, style={'height': "90%"}),
     ]),
 
     dbc.Row([
         dbc.Col(total_table),
         dbc.Col(perc_table),
     ])
-    
-    ##html.Iframe(src=app.get_asset_url('ctmap.html'),
-    ##            style={"height": "1067px", "width": "100%"})
 ])
 
 
@@ -240,7 +311,9 @@ app.layout = dbc.Container([
 
 @app.callback([
     Output('severity-fig','figure'),
-    Output('age-fig', 'figure')],
+    Output('age-fig', 'figure'),
+    Output('state-fig', 'figure'),
+    Output('sex-fig', 'figure')],
     [Input('my-dpdn','value')])
 
 def update_bar_chart(Town):
@@ -279,7 +352,43 @@ def update_bar_chart(Town):
                     'size': 11
                 }
         })
-    return fig1, fig2
+
+    mask3 = state_df["Town"] == Town
+    fig3 = px.bar(state_df[mask3], x="State", y="Count", #color = "Severity",
+                 barmode="group")
+    fig3.update_layout({
+        "title":{
+                        "text": "State Registration of Cases by Town",
+                        "x": 0.05,
+                        "xanchor": "left",
+                    },
+        'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+        'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+        'colorway': ["#00e3ff"],
+        'font': {
+                    'color': colors['text'],
+                    'size': 11
+                }
+        })
+    
+    mask4 = sex_df["Town"] == Town
+    fig4 = px.bar(sex_df[mask4], x="Sex", y="Count", #color = "Severity",
+                 barmode="group")
+    fig4.update_layout({
+        "title":{
+                        "text": "Sex of Cases by Town",
+                        "x": 0.05,
+                        "xanchor": "left",
+                    },
+        'plot_bgcolor': 'rgba(0, 0, 0, 0)',
+        'paper_bgcolor': 'rgba(0, 0, 0, 0)',
+        'colorway': ["#00e3ff"],
+        'font': {
+                    'color': colors['text'],
+                    'size': 11
+                }
+        })
+    return fig1, fig2, fig3, fig4
 
 
 
