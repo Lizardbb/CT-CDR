@@ -263,12 +263,7 @@ app.layout = dbc.Container([
     #Navbar 
  
 
-    #title 
-    dbc.Row([
-        dbc.Col(html.H2("Demographics",
-                        className='text-center text-primary mb-4'),
-                        width = 12)
-    ]),
+   
     ###hollistic bar graph
     dbc.Row([
         dbc.Col(card_graph, width=12),
