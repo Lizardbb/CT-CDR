@@ -286,8 +286,9 @@ body, html {
 
   embed.ToxDash {
     overflow: hidden;
-    width: 100%;
+    width: 97em;
     height: 120%;
+    margin-left: -3em;
   }
 }
  
@@ -305,6 +306,7 @@ body, html {
     width: 60em;
     height: 100vh;
     margin-bottom: 30em;
+    padding: 0;
   }
 
     h2 {
@@ -319,19 +321,18 @@ body, html {
   /*Injury Fatality*/
 
   #Injury {
-    tr {
-      margin-top: -3em;
-    }
   
     embed.InjuryGraph {
       overflow: hidden;
-  
-      width: 60em;
+      padding-left: .5em;
+      width: 55em;
       height: 100vh;
+      margin-left: -1.5em;
   
     }
   
     embed.IFMap {
+      margin-bottom: 32em;
       width: 35em;
       height: 40em;
       padding-left: 1em;
@@ -345,8 +346,9 @@ body, html {
 
   /*Road Cond*/
   embed.RoadCond-Dash {
-    width: 90%;
+    width: 97%;
     height: 110%;
+    margin-left: -3em;
  
   }
 
@@ -354,10 +356,10 @@ body, html {
 
   embed.COVID-Graph {
     overflow: hidden;
-    width: 60em;
+    width: 70em;
     height: 60em;
     margin-top: 3%;
-    margin-left: 10%;
+    margin-left: 3%;
   }
 
 
