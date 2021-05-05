@@ -184,6 +184,15 @@ body h1, html h1 {
   height: 110%;
 }
 
+#VehicleStats h1 {
+  margin-left: 40%;
+}
+
+#VehicleStats embed.VeDash {
+  width: 100%;
+  height: 110%;
+}
+
 /* Media Queries */
 /*1. 1600px screens and below (rather small)*/
 @media screen and (max-width: 1600px) {
